@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página en Construcción</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            font-family: Arial, sans-serif;
+        }
+
+        .background {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-size: cover;
+            background-position: center;
+            animation: changeBackground 15s infinite;
+        }
+
+        @keyframes changeBackground {
+            0% { background-image: url('img/electrica.JPEG'); }
+            33% { background-image: url('img/genba.jpg'); }
+            66% { background-image: url('img/image1.JPEG'); }
+            100% { background-image: url('img/moldes.JPEG'); }
+        }
+
+        .overlay {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+        }
+
+        .countdown {
+            font-size: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+    <div class="overlay">
+        <div>
+            <h1>Página en Construcción</h1>
+            <p class="countdown" id="countdown"></p>
+        </div>
+    </div>
+
+    <script>
+        function startCountdown(endDate) {
+            const countdownElement = document.getElementById('countdown');
+            function updateCountdown() {
+                const now = new Date().getTime();
+                const distance = endDate - now;
+
+                if (distance < 0) {
+                    countdownElement.innerHTML = "¡Pronto estaremos en línea!";
+                    clearInterval(interval);
+                    return;
+                }
+
+                const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+                const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+                countdownElement.innerHTML = `${days}d ${hours}h ${minutes}m ${seconds}s`;
+            }
+
+            const interval = setInterval(updateCountdown, 1000);
+            updateCountdown();
+        }
+
+        const targetDate = new Date();
+        targetDate.setDate(targetDate.getDate() + 7); // Cambiar a 7 días desde ahora
+        startCountdown(targetDate);
+    </script>
+</body>
+</html>
