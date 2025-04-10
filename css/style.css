@@ -1,3 +1,59 @@
-img {
-    opacity: 0.9; /* Ajusta el valor entre 0 (completamente transparente) y 1 (completamente opaco) */
-}
+body {
+    scroll-behavior: smooth;
+  }
+
+  /* Jumbotron */
+  #home {
+    background: url('../img/electrica.JPEG') no-repeat center center;
+    background-size: cover;
+    min-height: 90vh;
+    position: relative;
+    color: white;
+  }
+
+  #home::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    z-index: 1;
+  }
+
+  #home .container {
+    position: relative;
+    z-index: 2;
+  }
+
+  .gallery-img {
+    width: 100%;
+    height: 200px;
+    border-radius: 10px;
+  }
+
+  footer {
+    background-color: #343a40;
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+  }
+
+  .whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+  }
+
+  .whatsapp-float img {
+    width: 60px;
+    height: 60px;
+  }
+
+  iframe {
+    border: 0;
+    width: 100%;
+    height: 300px;
+    border-radius: 10px;
+  }
