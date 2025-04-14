@@ -10,17 +10,19 @@
  
   <!-- AOS CSS -->
   <link href="https://protect.checkpoint.com/v2/r01/___https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css___.YzJ1OmNoYXJseTpjOm86NjIyYTBmZmI0MGY0Y2ZlZDIyY2E0ODg1ZjcyNWExZDY6Nzo4NWJmOjcxMDE2NzViYzM2ZWNjNzAxZmNlNWQ1NzJiYjJiNWEwNmY5YWQyZWRlN2IyMDUxYTdhNTE0NjBhZGQ3YTExOTg6cDpUOk4" rel="stylesheet">
-<link rel="icon" href="img/genba.png" type="image/x-icon">
+  <link rel="icon" href="img/genba.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+
 
   <!-- Estilos personalizados -->
-    <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
 <!-- Navbar -->
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#">Metal Mecánica XYZ</a>
+    <a class="navbar-brand" href="#">Genba-ingenieria</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -38,9 +40,9 @@
 <!-- Jumbotron -->
 <section id="home" class="d-flex align-items-center text-center">
   <div class="container" data-aos="fade-up">
-    <h1 class="display-4 fw-bold">Metal Mecánica XYZ</h1>
+    <h1 class="display-4 fw-bold">Genba-ingenieria</h1>
     <p class="lead">Soluciones integrales en estructuras metálicas y maquinaria industrial</p>
-    <a href="#contacto" class="btn btn-light btn-lg mt-3">Solicita tu cotización</a>
+    <a href="#contacto" class="btn btn-light btn-lg mt-3">Contactanos</a>
   </div>
 </section>
 
@@ -48,17 +50,65 @@
 <section id="galeria" class="py-5">
   <div class="container">
     <h2 class="text-center mb-5">Galería</h2>
-    <div class="row g-4">
-      <div class="col-md-4" data-aos="fade-up">
+    <div class="row justify-content-center">
+      <div class="col-md-2" data-aos="fade-up">
         <img src="img/electrica.JPEG" class="gallery-img" alt="Proyecto 1">
       </div>
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+      <div class="col-md-2" data-aos="fade-up" data-aos-delay="100">
         <img src="img/image1.JPEG" class="gallery-img" alt="Proyecto 2">
       </div>
-      <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+      <div class="col-md-2" data-aos="fade-up" data-aos-delay="200">
+        <img src="img/moldes.JPEG" class="gallery-img" alt="Proyecto 3">
+      </div>
+      <div class="col-md-2" data-aos="fade-up" data-aos-delay="200">
+        <img src="img/moldes.JPEG" class="gallery-img" alt="Proyecto 3">
+      </div>
+      <div class="col-md-2" data-aos="fade-up" data-aos-delay="200">
         <img src="img/moldes.JPEG" class="gallery-img" alt="Proyecto 3">
       </div>
     </div>
+    <div class="row justify-content-center">
+      <div class="col-12 text-center mt-4">
+        <div class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#galeriaModal">Ver más</div>
+      </div>
+      <!-- Modal -->
+      <div class="modal fade" id="galeriaModal" tabindex="-1" aria-labelledby="galeriaModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="galeriaModalLabel">Galería Completa</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <div class="row">
+                <!-- Replace this section with dynamically loaded images -->
+                <script>
+                  fetch('img')
+                  .then(response => response.text())
+                  .then(data => {
+                    const parser = new DOMParser();
+                    const htmlDoc = parser.parseFromString(data, 'text/html');
+                    const images = htmlDoc.querySelectorAll('a[href$=".jpg"], a[href$=".jpeg"], a[href$=".png"]');
+                    const container = document.querySelector('#galeriaModal .modal-body .row');
+                    images.forEach(image => {
+                    const imgElement = document.createElement('img');
+                    imgElement.src = `./${image.getAttribute('href')}`;
+                    imgElement.className = 'img-fluid';
+                    imgElement.style = 'width: 200px; height: 200px; object-fit: cover; margin: 5px; border-radius: 5px;';
+                    container.appendChild(imgElement);
+                    });
+                  })
+                  .catch(error => console.error('Error loading images:', error));
+                </script>
+                </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
   </div>
 </section>
 
@@ -116,5 +166,6 @@
 <script>
   AOS.init();
 </script>
+<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 </body>
 </html>
