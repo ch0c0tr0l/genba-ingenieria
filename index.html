@@ -173,33 +173,6 @@
       <div class="modal-body">
         <div id="modalGallery" class="row">
           <!-- Las imágenes se cargarán aquí dinámicamente -->
-          <script>
-            function loadImages(folder) {
-              const modalGallery = document.getElementById('modalGallery');
-              modalGallery.innerHTML = ''; // Limpiar contenido previo
-
-              fetch(`img/${folder}/`)
-                .then(response => response.json())
-                .then(images => {
-                  images.forEach(image => {
-                    console.log(image); // Verificar el nombre de la imagen
-                    const col = document.createElement('div');
-                    col.className = 'col-md-4 mb-3';
-
-                    const img = document.createElement('img');
-                    img.src = `${folder}/${image}`;
-                    img.className = 'img-fluid rounded';
-                    img.alt = 'Imagen de galería';
-
-                    col.appendChild(img);
-                    modalGallery.appendChild(col);
-                  });
-                })
-                .catch(error => {
-                  console.error('Error al cargar las imagenes jose:', error);
-                });
-            }
-          </script>
         </div>
       </div>
     </div>
