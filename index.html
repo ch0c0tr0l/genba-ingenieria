@@ -132,7 +132,7 @@
             <p class="card-text">Galería de diseños industriales.</p>
           </div>
           <div class="card_footer">
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#galeriaModal" onclick="loadImages('Dis_industrial')">Ver más</button>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#galeriaModal" onclick="loadImages('Dis_industrial');" > Ver más </button>
           </div>
         </div>
       </div>
@@ -176,24 +176,28 @@
           <script>
             function loadImages(folder) {
               const modalGallery = document.getElementById('modalGallery');
-              modalGallery.innerHTML = ''; // Limpiar contenido anterior
+              modalGallery.innerHTML = ''; // Limpiar contenido previo
 
-              fetch(`/img/${folder}`)
+              fetch(`img/${folder}/`)
                 .then(response => response.json())
                 .then(images => {
                   images.forEach(image => {
+                    console.log(image); // Verificar el nombre de la imagen
                     const col = document.createElement('div');
                     col.className = 'col-md-4 mb-3';
 
                     const img = document.createElement('img');
-                    img.src = `/img/${folder}/${image}`;
+                    img.src = `${folder}/${image}`;
                     img.className = 'img-fluid rounded';
                     img.alt = 'Imagen de galería';
 
                     col.appendChild(img);
                     modalGallery.appendChild(col);
                   });
-                });;
+                })
+                .catch(error => {
+                  console.error('Error al cargar las imagenes jose:', error);
+                });
             }
           </script>
         </div>
