@@ -10,7 +10,7 @@ function loadImages(folder) {
     loadingDiv.style.fontSize = "1.5rem";
     contenedor.appendChild(loadingDiv);
 
-    var ruta = 'http://localhost:8000/php/extractor.php?carpeta=' + folder;
+    var ruta = 'https://genba-ingenieria.com/php/extractor.php?carpeta=' + folder;
     var request = new XMLHttpRequest();
     request.open("GET", ruta);
     request.send();
