@@ -35,7 +35,7 @@
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav" style="">
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
       <ul class="navbar-nav ">
         <li class="nav-item active">
           <a class="nav-link" href="#home">Inicio</a>
@@ -117,11 +117,11 @@
   </div>
 </div>
 <!-- Galería -->
-<section id="galeria" class="py-5">
+<section id="galeria" class="py-5" data-aos="fade-up">
   <div class="container">
     <h2 class="text-center mb-5">Galería</h2>
     <div class="row">
-      <div class="col-md-6 col-lg-3 mb-4">
+      <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="100">
         <div class="card text-center h-100">
           <img src="img/Electrica/ele8.JPEG" class="card-img-top" alt="Imagen 1">
           <div class="card-body">
@@ -133,7 +133,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-3 mb-4">
+      <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="200">
         <div class="card text-center h-100">
           <img src="img/Dis_industrial/dis_3.jpg" class="card-img-top" alt="Imagen 1">
           <div class="card-body">
@@ -141,11 +141,11 @@
             <p class="card-text">Galería de diseños industriales.</p>
           </div>
           <div class="card_footer">
-            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#galeriaModal" onclick="loadImages('Dis_industrial');" > Ver más </button>
+            <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#galeriaModal" onclick="loadImages('Dis_industrial');">Ver más</button>
           </div>
         </div>
       </div>
-      <div class="col-md-6 col-lg-3 mb-4">
+      <div class="col-md-6 col-lg-3 mb-4" data-aos="fade-up" data-aos-delay="300">
         <div class="card text-center h-100">
           <img src="img/pai_Estruc_metalicas/pai1.JPEG" class="card-img-top" alt="Imagen 1">
           <div class="card-body">
@@ -189,91 +189,91 @@
 </div>
 
 <!-- nosotros -->
-<section id="nosotros" class="py-5">
+<section id="nosotros" class="py-5" data-aos="fade-right">
   <div class="container">
     <h2 class="text-center mb-5">Nosotros</h2>
     <!-- Jumbotron -->
-      <div class="jumbotron text-center py-5 bg-primary text-white rounded">
-        <div class="row">
-          <h1 class="display-4">Conoce más sobre nosotros</h1>
-          <p class="lead">Somos una empresa comprometida con la excelencia y la innovación en cada proyecto.</p>
-        </div>  
-          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#misionModal"
-          style="background-color: white;"><span style="color: blue;">Leer más </span></button>
+    <div class="jumbotron text-center py-5 bg-primary text-white rounded" data-aos="fade-right">
+      <div class="row">
+        <h1 class="display-4">Conoce más sobre nosotros</h1>
+        <p class="lead">Somos una empresa comprometida con la excelencia y la innovación en cada proyecto.</p>
       </div>
+      <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#misionModal" style="background-color: white;">
+        <span style="color: blue;">Leer más </span>
+      </button>
     </div>
-    <!-- Cards -->
-     <div class="container">
-        <div class="row">
-          <div class="col-md-4 mb-4">
-            <div class="card h-100 text-center flip-card">
-              <div class="flip-card-inner">
-                <div class="flip-card-front">
-                  <img src="img/Blanco.svg" class="card-img-top" alt="Card 1" width="100px" height="100px">
-                  <div class="card-body">
-                    <h5 class="card-title">MISION</h5>
-                  </div>
-                </div>
-                <div class="flip-card-back">
-                  <div class="card-body">
-                    <p class="card-text">
-                      Posicionarnos en el mercado industrial a través de nuestro servicio, calidad y desarrollo de soluciones integrales para nuestros socios comerciales.
-                    </p>
-                  </div>
-                </div>
+  </div>
+  <!-- Cards -->
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4 mb-4 col-12" data-aos="fade-right" data-aos-delay="100">
+        <div class="card h-100 text-center flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/Blanco.svg" class="card-img-top" alt="Card 1" width="100px" height="100px">
+              <div class="card-body">
+                <h5 class="card-title">MISION</h5>
               </div>
             </div>
-          </div>
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 text-center flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="img/VISION.svg" class="card-img-top" alt="Card 2" width="100px" height="100px">
-                <div class="card-body">
-                  <h5 class="card-title">VISION</h5>
-                </div>
-              </div>
-              <div class="flip-card-back">
-                <div class="card-body">
-                  <p class="card-text">Ser reconocidos como empresa líder en el Bajío y en México a través de nuestros productos y servicios, buscando siempre la mejora continua de los mismos.</p>
-                </div>
+            <div class="flip-card-back">
+              <div class="card-body">
+                <p class="card-text">
+                  Posicionarnos en el mercado industrial a través de nuestro servicio, calidad y desarrollo de soluciones integrales para nuestros socios comerciales.
+                </p>
               </div>
             </div>
           </div>
         </div>
-        <div class="col-md-4 mb-4">
-          <div class="card h-100 text-center flip-card">
-            <div class="flip-card-inner">
-              <div class="flip-card-front">
-                <img src="img/casa.svg" class="card-img-top" alt="Card 3" width="100px" height="100px">
-                <div class="card-body">
-                  <h5 class="card-title">VALORES</h5>
-                </div>
+      </div>
+      <div class="col-md-4 mb-4 col-12" data-aos="fade-right" data-aos-delay="200">
+        <div class="card h-100 text-center flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/VISION.svg" class="card-img-top" alt="Card 2" width="100px" height="100px">
+              <div class="card-body">
+                <h5 class="card-title">VISION</h5>
               </div>
-              <div class="flip-card-back">
-                <div class="card-body">
-                  <ul>
+            </div>
+            <div class="flip-card-back">
+              <div class="card-body">
+                <p class="card-text">Ser reconocidos como empresa líder en el Bajío y en México a través de nuestros productos y servicios, buscando siempre la mejora continua de los mismos.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-4 mb-4 col-12" data-aos="fade-right" data-aos-delay="300">
+        <div class="card h-100 text-center flip-card">
+          <div class="flip-card-inner">
+            <div class="flip-card-front">
+              <img src="img/casa.svg" class="card-img-top" alt="Card 3" width="100px" height="100px">
+              <div class="card-body">
+                <h5 class="card-title">VALORES</h5>
+              </div>
+            </div>
+            <div class="flip-card-back">
+              <div class="card-body">
+                <ul>
                   <li>Disciplina</li>
                   <li>Honestidad</li>
                   <li>Excelencia</li>
                   <li>Compromiso</li>
                   <li>Integridad</li>
-                  </ul>
-                </div>
-
-                </div>
+                </ul>
               </div>
             </div>
           </div>
         </div>
+      </div>
     </div>
-  </section>
-  <div class="modal fade" id="misionModal" tabindex="-1" aria-labelledby="misionModalLabel" aria-hidden="true">
-    <div class="modal-dialog">
+  </div>
+</section>
+<div class="modal fade" id="misionModal" tabindex="-1" aria-labelledby="misionModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-      <h5 class="modal-title" id="misionModalLabel">Nuestra Misión</h5>
-      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        <h5 class="modal-title" id="misionModalLabel">Nuestra Misión</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
         <p style="color: black;">GENBA es una empresa enfocada en la provisión de servicios y productos integrales. Brindamos soluciones a nuestros clientes a través del desarrollo de ingeniería, fabricación y diseño de piezas metálicas, así como servicios de instalación y proyectos industriales. </p>
@@ -281,39 +281,39 @@
         <p style="color: black;">Innovamos continuamente nuestros procesos para lograr una mayor calidad en cada uno de ellos. Ofrecemos productos de calidad a un precio competitivo y con un tiempo de respuesta oportuno.</p>
       </div>
       <div class="modal-footer">
-      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
       </div>
     </div>
-    </div>
   </div>
-    <style>
-      .flip-card {
-        perspective: 1000px;
-      }
-      .flip-card-inner {
-        position: relative;
-        width: 100%;
-        height: 100%;
-        transition: transform 0.6s;
-        transform-style: preserve-3d;
-      }
-      .flip-card:hover .flip-card-inner {
-        transform: rotateY(180deg);
-      }
-      .flip-card-front, .flip-card-back {
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        backface-visibility: hidden;
-      }
-      .flip-card-back {
-        transform: rotateY(180deg);
-        background-color: #f8f9fa;
-        display: flex;
-        justify-content: center;
-        align-items: bottom;
-      }
-    </style>
+</div>
+<style>
+  .flip-card {
+    perspective: 1000px;
+  }
+  .flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+  .flip-card-back {
+    transform: rotateY(180deg);
+    background-color: #f8f9fa;
+    display: flex;
+    justify-content: center;
+    align-items: bottom;
+  }
+</style>
 <br><br><br><br>
 <!-- Clientes -->
 <!-- <section id="clientes" class="py-5 bg-light">
@@ -335,14 +335,14 @@
 </section> -->
 
 <!-- Contacto -->
-<section id="contacto" class="py-5">
+<section id="contacto" class="py-5" data-aos="fade-left">
   <div class="container rounded" style="background-color: whitesmoke;">
     <h2 class="text-center mb-5" style="color: black;">Contáctanos</h2>
     <div class="row">
-      <div class="col-md-6">
+      <div class="col-md-6" data-aos="fade-left" data-aos-delay="100">
         <img src="img/contacto.jpg" alt="Imagen de Contacto" class="img-fluid rounded">
       </div>
-      <div class="col-md-6">
+      <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
         <form action="/php/send_email.php" method="POST">
           <div class="mb-3">
             <label for="name" class="form-label">Nombre</label>
@@ -360,7 +360,7 @@
             <label for="message" class="form-label">Mensaje</label>
             <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
           </div>
-          <button type="submit" class="btn btn-primary" name="to" id="to" value="jcruzc@charly.com">Enviar</button>
+          <button type="submit" class="btn btn-primary" name="to" id="to" value="contacto@genba-ingenieria.com">Enviar</button>
         </form>
       </div>
     </div>
