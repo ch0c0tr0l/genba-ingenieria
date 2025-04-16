@@ -25,7 +25,7 @@ function loadImages(folder) {
         for (var i = 0; i < listaimagen.length; i++) {
             var imagen = document.createElement("img");
             imagen.src = listaimagen[i];
-            imagen.classList.add("img-fluid", "resize");
+            imagen.classList.add("img-thumbnail", "img-fluid", "col-3", "m-2","rounded");
             imagen.setAttribute("data-bs-toggle", "modal");
             imagen.setAttribute("data-bs-target", "#exampleModal");
             contenedor.appendChild(imagen);

@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Genba-ingenieria</title>
+  <title>GENBA</title>
   <!-- Bootstrap CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <!-- AOS CSS -->
@@ -31,23 +31,26 @@
 </script>
 <nav class="navbar navbar-expand-lg sticky-top navbar-light bg-light">
   <div class="container-fluid">
-    <a class="navbar-brand" href="#"><img src="img/genba.png" class="img-fluid" alt="Genba Logo" style="max-height: 50px;"> Genba-ingenieria</a>
+    <a class="navbar-brand" href="#"><img src="img/genba.png" class="img-fluid" alt="Genba Logo" style="max-height: 50px;"> GENBA</a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
       <span class="navbar-toggler-icon"></span>
     </button>
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item">
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav" style="">
+      <ul class="navbar-nav ">
+        <li class="nav-item active">
           <a class="nav-link" href="#home">Inicio</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item ">
           <a class="nav-link" href="#galeria">Galería</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item ">
           <a class="nav-link" href="#clientes">Clientes</a>
         </li>
-        <li class="nav-item">
+        <li class="nav-item ">
           <a class="nav-link" href="#contacto">Contacto</a>
+        </li>
+        <li class="nav-item ">
+          <a class="nav-link" href="#nosotros">Nosotros</a>
         </li>
       </ul>
     </div>
@@ -66,9 +69,9 @@
       <div class="carousel-item active">
         <img src="img/genba.jpg" class="d-block w-100 img-fluid jum-img" alt="Inicio" style="height: 400px; object-fit: cover; opacity: 1;">
         <div class="carousel-caption d-none d-md-block">
-          <h5>Inicio</h5>
-          <p>Bienvenido a Genba-ingenieria</p>
-          <a href="#home" class="btn btn-primary">Ir a Inicio</a>
+          <h5>Somos el mejor aliado en tus proyectos</h5>
+          <p></p>
+          <!--<a href="#home" class="btn btn-primary">Ir a Inicio</a>-->
         </div>
       </div>
       <div class="carousel-item">
@@ -179,23 +182,175 @@
   </div>
 </div>
 
+<!-- nosotros -->
+<section id="nosotros" class="py-5 bg-light">
+  <div class="container">
+    <h2 class="text-center mb-5">Nosotros</h2>
+    <!-- Jumbotron -->
+      <div class="jumbotron text-center py-5 bg-primary text-white rounded">
+        <div class="row">
+          <h1 class="display-4">Conoce más sobre nosotros</h1>
+          <p class="lead">Somos una empresa comprometida con la excelencia y la innovación en cada proyecto.</p>
+        </div>  
+          <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#misionModal"
+          style="background-color: white;"><span style="color: blue;">Leer más </span></button>
+      </div>
+    </div>
+    <!-- Cards -->
+     <div class="container">
+        <div class="row">
+          <div class="col-md-4 mb-4">
+            <div class="card h-100 text-center flip-card">
+              <div class="flip-card-inner">
+                <div class="flip-card-front">
+                  <img src="img/OIP.jpg" class="card-img-top" alt="Card 1" width="100px" height="50px">
+                  <div class="card-body">
+                    <h5 class="card-title">MISION</h5>
+                  </div>
+                </div>
+                <div class="flip-card-back">
+                  <div class="card-body">
+                    <p class="card-text">
+                      Posicionarnos en el mercado industrial a través de nuestro servicio, calidad y desarrollo de soluciones integrales para nuestros socios comerciales.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 text-center flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="img/VISION.jpg" class="card-img-top" alt="Card 2" width="100px" height="100px">
+                <div class="card-body">
+                  <h5 class="card-title">VISION</h5>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <div class="card-body">
+                  <p class="card-text">Ser reconocidos como empresa líder en el Bajío y en México a través de nuestros productos y servicios, buscando siempre la mejora continua de los mismos.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 mb-4">
+          <div class="card h-100 text-center flip-card">
+            <div class="flip-card-inner">
+              <div class="flip-card-front">
+                <img src="img/card3.jpg" class="card-img-top" alt="Card 3">
+                <div class="card-body">
+                  <h5 class="card-title">VALORES</h5>
+                </div>
+              </div>
+              <div class="flip-card-back">
+                <div class="card-body">
+                  <ul>
+                  <li>Disciplina</li>
+                  <li>Honestidad</li>
+                  <li>Excelencia</li>
+                  <li>Compromiso</li>
+                  <li>Integridad</li>
+                  </ul>
+                </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    </div>
+  </div>
+  <div class="modal fade" id="misionModal" tabindex="-1" aria-labelledby="misionModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+      <h5 class="modal-title" id="misionModalLabel">Nuestra Misión</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <p style="color: black;">GENBA es una empresa enfocada en la provisión de servicios y productos integrales. Brindamos soluciones a nuestros clientes a través del desarrollo de ingeniería, fabricación y diseño de piezas metálicas, así como servicios de instalación y proyectos industriales. </p>
+        <p style="color: black;">Nuestro compromiso es entregar productos y servicios que satisfagan las necesidades de nuestros clientes y con altos estándares de calidad.</p>
+        <p style="color: black;">Innovamos continuamente nuestros procesos para lograr una mayor calidad en cada uno de ellos. Ofrecemos productos de calidad a un precio competitivo y con un tiempo de respuesta oportuno.</p>
+      </div>
+      <div class="modal-footer">
+      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+      </div>
+    </div>
+    </div>
+  </div>
+
+    <style>
+      .flip-card {
+        perspective: 1000px;
+      }
+      .flip-card-inner {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        transition: transform 0.6s;
+        transform-style: preserve-3d;
+      }
+      .flip-card:hover .flip-card-inner {
+        transform: rotateY(180deg);
+      }
+      .flip-card-front, .flip-card-back {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        backface-visibility: hidden;
+      }
+      .flip-card-back {
+        transform: rotateY(180deg);
+        background-color: #f8f9fa;
+        display: flex;
+        justify-content: center;
+        align-items: bottom;
+      }
+    </style>
+</section>
 
 <!-- Clientes -->
 <section id="clientes" class="py-5 bg-light">
   <div class="container">
     <h2 class="text-center mb-5">Nuestros Clientes</h2>
     <ul class="list-group list-group-flush text-center">
-      <li class="list-group-item">Industria Alfa S.A.</li>
-      <li class="list-group-item">Construcciones Beta Ltda.</li>
-      <li class="list-group-item">Ingeniería Gamma</li>
     </ul>
   </div>
 </section>
 
 <!-- Contacto -->
 <section id="contacto" class="py-5">
-  <div class="container">
-    <h2 class="text-center mb-4">Contáctanos</h2>
+  <div class="container rounded" style="background-color: whitesmoke;">
+    <h2 class="text-center mb-5" style="color: black;">Contáctanos</h2>
+    <div class="row">
+      <div class="col-md-6">
+        <img src="img/contacto.jpg" alt="Imagen de Contacto" class="img-fluid rounded">
+      </div>
+      <div class="col-md-6">
+        <form action="/php/send_email.php" method="POST">
+          <div class="mb-3">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo Electrónico</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="subject" class="form-label">Asunto</label>
+            <input type="text" class="form-control" id="subject" name="subject" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" name="to" id="to" value="jcruzc@charly.com">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- Footer -->
@@ -206,7 +361,7 @@
 </footer>
 
 <!-- Botón WhatsApp -->
-<a class="whatsapp-float" href="https://protect.checkpoint.com/v2/r01/___https://wa.me/5491234567890___.YzJ1OmNoYXJseTpjOm86NjIyYTBmZmI0MGY0Y2ZlZDIyY2E0ODg1ZjcyNWExZDY6NzphYTVkOmU3MmE3OGUyNmMwYmJlZmY0NDYyNjhlNzFkMjk0YTBmYTA0ZTM2YTI1NTcyOThiYjAyZjViODM5NWVhMDc4YmM6cDpUOk4" target="_blank" title="Escríbenos por WhatsApp">
+<a class="whatsapp-float" href="https://wa.me/525647889600" target="_blank" title="Escríbenos por WhatsApp">
   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
 </a>
 

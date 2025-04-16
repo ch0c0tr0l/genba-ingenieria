@@ -34,9 +34,24 @@
     filter: brightness(50%);
   }
 .resize{
-  width: 200px; 
-  height: 200px;
-  margin-left: 5px;
-  margin-top: 5px;
-  transition: transform 0.3s ease;
+  object-fit: cover;
+}
+.nav-link {
+  position: relative;
+  transition: color 0.3s;
+}
+
+.nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 6px;
+  background-color: #007bff;
+  bottom: 0;
+  left: 0;
+  transition: width 0.3s;
+}
+
+.nav-link:hover::after {
+  width: 100%;
 }
