@@ -188,6 +188,22 @@
   </div>
 </div>
 
+<style>
+  #modalGallery img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.3s ease-in-out;
+  }
+
+  #modalGallery img:hover {
+    transform: scale(1.1);
+  }
+
+  #modalGallery .col {
+    padding: 5px;
+  }
+</style>
+
 <!-- nosotros -->
 <section id="nosotros" class="py-5" data-aos="fade-right">
   <div class="container">
@@ -206,7 +222,7 @@
   <!-- Cards -->
   <div class="container">
     <div class="row">
-      <div class="col-md-4 mb-4 col-12" data-aos="fade-right" data-aos-delay="100">
+      <div class="col-md-4 mb-4" data-aos="fade-right" data-aos-delay="100">
         <div class="card h-100 text-center flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
@@ -225,7 +241,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4 mb-4 col-12" data-aos="fade-right" data-aos-delay="200">
+      <div class="col-md-4 mb-4" data-aos="fade-right" data-aos-delay="200">
         <div class="card h-100 text-center flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
@@ -242,7 +258,7 @@
           </div>
         </div>
       </div>
-      <div class="col-md-4 mb-4 col-12" data-aos="fade-right" data-aos-delay="300">
+      <div class="col-md-4 mb-4" data-aos="fade-right" data-aos-delay="300">
         <div class="card h-100 text-center flip-card">
           <div class="flip-card-inner">
             <div class="flip-card-front">
@@ -313,6 +329,36 @@
     justify-content: center;
     align-items: bottom;
   }
+
+  @media screen and (max-width: 768px) {
+    .flip-card {
+    perspective: 100%;
+  }
+  .flip-card-inner {
+
+    width: 50%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+  }
+  .flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+  }
+  .flip-card-front, .flip-card-back {
+    width: 100%;
+    height: 100%;
+    display: block;
+    backface-visibility: hidden;
+  }
+  .flip-card-back {
+    transform: rotateY(180deg);
+    background-color: #f8f9fa;
+    position: relative;
+    display: block;
+    justify-content: center;
+    align-items: bottom;
+  }
+  }
 </style>
 <br><br><br><br>
 <!-- Clientes -->
@@ -331,8 +377,8 @@
       </div>
     </div>
     
-  </div>
-</section> -->
+  </div>-->
+</section>
 
 <!-- Contacto -->
 <section id="contacto" class="py-5" data-aos="fade-left">
