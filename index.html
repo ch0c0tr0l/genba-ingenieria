@@ -180,13 +180,41 @@
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close" aria-hidden="true"></button>
       </div>
       <div class="modal-body">
-        <div id="modalGallery" class="row">
+        <div id="modalGallery" class="row justify-content-center">
           <!-- Las imágenes se cargarán aquí dinámicamente -->
         </div>
       </div>
     </div>
   </div>
 </div>
+
+<!-- Modal para mostrar imagen agrandada -->
+<div class="modal fade" id="imageModal" tabindex="-1" aria-labelledby="imageModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="imageModalLabel">Vista Previa</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body text-center">
+        <img id="enlargedImage" src="" alt="Imagen Agrandada" class="img-fluid">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  // Función para mostrar la imagen agrandada en el modal
+  document.addEventListener('click', function (event) {
+    if (event.target.tagName === 'IMG' && event.target.closest('#modalGallery')) {
+      const imageSrc = event.target.src;
+      const enlargedImage = document.getElementById('enlargedImage');
+      enlargedImage.src = imageSrc;
+      const imageModal = new bootstrap.Modal(document.getElementById('imageModal'));
+      imageModal.show();
+    }
+  });
+</script>
 
 <style>
   #modalGallery img {
