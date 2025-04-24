@@ -214,6 +214,21 @@
       imageModal.show();
     }
   });
+
+  function goToPreviousModal() {
+    const currentModal = document.getElementById('imageModal');
+    const previousModal = document.getElementById('galeriaModal');
+    
+    if (currentModal) {
+      const bootstrapModal = bootstrap.Modal.getInstance(currentModal);
+      bootstrapModal.hide();
+    }
+
+    if (previousModal) {
+      const bootstrapModal = new bootstrap.Modal(previousModal);
+      bootstrapModal.show();
+    }
+  }
 </script>
 
 <style>
