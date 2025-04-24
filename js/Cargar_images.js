@@ -25,8 +25,46 @@ function loadImages(folder) {
         for (var i = 0; i < listaimagen.length; i++) {
             var imagen = document.createElement("img");
             imagen.src = listaimagen[i];
-            imagen.classList.add("img-thumbnail", "img-fluid", "col-3", "m-2","rounded");
+            imagen.classList.add("img-thumbnail", "img-fluid", "col-3", "m-2", "rounded");
             imagen.setAttribute("data-bs-toggle", "modal");
+            imagen.style.cursor = "pointer";
+
+            // Agregar evento para agrandar la imagen al hacer clic
+            imagen.addEventListener("click", function () {
+                var modal = document.createElement("div");
+                modal.classList.add("modal", "fade");
+                modal.tabIndex = -1;
+
+                var modalDialog = document.createElement("div");
+                modalDialog.classList.add("modal-dialog", "modal-dialog-centered");
+
+                var modalContent = document.createElement("div");
+                modalContent.classList.add("modal-content");
+
+                var modalBody = document.createElement("div");
+                modalBody.classList.add("modal-body", "text-center");
+
+                var modalImage = document.createElement("img");
+                modalImage.src = imagen.src;
+                modalImage.classList.add("img-fluid", "rounded");
+
+                modalBody.appendChild(modalImage);
+                modalContent.appendChild(modalBody);
+                modalDialog.appendChild(modalContent);
+                modal.appendChild(modalDialog);
+
+                document.body.appendChild(modal);
+
+                // Mostrar el modal
+                var bootstrapModal = new bootstrap.Modal(modal);
+                bootstrapModal.show();
+
+                // Eliminar el modal del DOM al cerrarlo
+                modal.addEventListener("hidden.bs.modal", function () {
+                    modal.remove();
+                });
+            });
+
             contenedor.appendChild(imagen);
         }
     }
