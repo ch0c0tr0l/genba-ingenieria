@@ -25,7 +25,7 @@ function loadImages(folder) {
         for (var i = 0; i < listaimagen.length; i++) {
             var imagen = document.createElement("img");
             imagen.src = listaimagen[i];
-            imagen.classList.add("img-thumbnail", "img-fluid", "col-3", "m-2", "rounded");
+            imagen.classList.add("img-thumbnail", "img-fluid", "col-3", "m-2", "rounded", "d-block", "mx-auto");
             imagen.setAttribute("data-bs-toggle", "modal");
             imagen.style.cursor = "pointer";
 
