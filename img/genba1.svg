@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<!-- Creator: CorelDRAW (Evaluation Version) -->
+<svg xmlns="http://www.w3.org/2000/svg" xml:space="preserve" width="210mm" height="297mm" version="1.1" style="shape-rendering:geometricPrecision; text-rendering:geometricPrecision; image-rendering:optimizeQuality; fill-rule:evenodd; clip-rule:evenodd"
+viewBox="0 0 21000 29700"
+ xmlns:xlink="http://www.w3.org/1999/xlink"
+ xmlns:xodm="http://www.corel.com/coreldraw/odm/2003">
+ <defs>
+  <style type="text/css">
+   <![CDATA[
+    .str0 {stroke:white;stroke-width:20;stroke-miterlimit:22.9256}
+    .fil0 {fill:white}
+   ]]>
+  </style>
+ </defs>
+ <g id="Layer_x0020_1">
+  <metadata id="CorelCorpID_0Corel-Layer"/>
+  <g id="_474267400">
+   <image id="genba.jpg" x="-39484.8" y="-2347.91" width="98603.52" height="34395.82" xlink:href="genba_Images/genba_ImgID1.png"/>
+   <image id="genba.jpg_0" x="-8020.83" y="-2347.91" width="37041.66" height="34395.82" xlink:href="genba_Images/genba_ImgID2.png"/>
+   <rect class="fil0 str0" x="-28590.7" y="258.8" width="23537.61" height="30694.32"/>
+   <rect class="fil0 str0" x="23017.1" y="417.84" width="23537.61" height="30694.32"/>
+  </g>
+ </g>
+</svg>
