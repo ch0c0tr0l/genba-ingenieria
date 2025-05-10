@@ -35,7 +35,7 @@
 <nav class="navbar navbar-expand-lg" id="main-navbar" style="background-color: transparent;">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <img src="img/genba.png" alt="Genba Logo" style="max-height: 50px;">
+      <img src="img/Genba_Blanco.png" alt="Genba Logo" style="max-height: 90px; ">
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="background-color:  white;">
       <span class="navbar-toggler-icon" style="background-color: white;"></span>
@@ -46,10 +46,10 @@
           <a class="nav-link" href="#home">Inicio</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#galeria">Galería</a>
+          <a class="nav-link" href="#nosotros">Nosotros</a>
         </li>
         <li class="nav-item">
-          <a class="nav-link" href="#nosotros">Nosotros</a>
+          <a class="nav-link" href="#galeria">Galería</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#contacto">Contacto</a>
@@ -58,7 +58,32 @@
     </div>
   </div>
 </nav>
+<script>
+  document.addEventListener('scroll', function () {
+    const sections = document.querySelectorAll('section');
+    const navbar = document.getElementById('main-navbar');
+    const navLinks = document.querySelectorAll(' .nav-link');
 
+    let currentSection = '';
+
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+        currentSection = section.id;
+      }
+    });
+
+    navLinks.forEach(link => {
+      if (link.getAttribute('href').substring(1) === currentSection) {
+        link.style.textShadow = '0px 0px 10px white, 0px 0px 20px white, 0px 0px 30px white';
+      } else {
+        link.style.textShadow = 'none';
+      }
+    });
+
+
+  });
+</script>
 <style>
   #main-navbar {
     background-color: white;
@@ -101,50 +126,35 @@
   });
 </script>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function () {
-    const sections = document.querySelectorAll('section');
-    const navLinks = document.querySelectorAll('.nav-link');
 
-    window.addEventListener('scroll', function () {
-      let current = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 100;
-        if (window.scrollY >= sectionTop) {
-          current = section.getAttribute('id');
-        }
-      });
 
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-          link.classList.add('active');
-        }
-      });
-    });
-  });
-</script>
-<!--<style>
-  .navbar-nav .nav-link.active {
-    color: white !important;
-    font-weight: bold;
-    background-color: #0833a2;
-    border-radius: 5px;
-    padding: 5px 10px;
-  }
-</style> -->
 <!-- Jumbotron -->
 <section id="home">
-  <div class="container-fluid text-center py-5 d-flex justify-content-center align-items-center position-relative" style="height: 50vh;">
+  <div class="container-fluid text-center py-5 d-flex justify-content-center align-items-center position-relative" style="height: 70vh;">
     <div class="row">
-      <div class="col-md-9 text-white position-relative" style="z-index: 2;" data-aos="fade-left" data-aos-duration="1000">
-        <h1 class="mb-2 wordart-text">SOMOS EL MEJOR ALIADO EN</h1>
-        <h1 class="mb-4 wordart-text align-items">TUS PROYECTOS</h1>
+      <div class="col-md-8 text-white position-relative" style="z-index: 2;" data-aos="fade-left" data-aos-duration="1000">
+        <h2 class="wordart-text">SOMOS EL MEJOR ALIADO </h2>
+        <h2 class="wordart-text align-items">EN TUS PROYECTOS</h2>
       </div>
-    <div class="col-md-3 d-flex justify-content-center align-items-center" data-aos="fade-right" data-aos-duration="1000">
-      <img src="img/moldes/molde2.png" alt="Proyectos" class="position-absolute" style="z-index: 1; width: 250px; height: 250px; left: 0%;" data-aos="fade-right" data-aos-offset="600" data-aos-duration="1000" data-aos-delay="0">
-      <img src="img/moldes/molde3.png" alt="Proyectos" class="position-absolute" style="z-index: 1; width: 250px; height: 250px; left: 80%;" data-aos="fade-right" data-aos-offset="600" data-aos-duration="1000" data-aos-delay="600">
+    <div class="col-md-4 d-flex justify-content-center align-items-center">
+      <img src="img/moldes/molde5.png" alt="Proyectos" style="z-index: 1; width: 250px; height: 200px; left: 0%; animation: slideRight 2s ease-in-out; ">
+      <img src="img/moldes/molde5.png" alt="Proyectos" style="z-index: 1; width: 250px; height: 200px; left: 10%;animation: slideRight 2s ease-in-out; ">
+
+      <style>
+        @keyframes slideRight {
+          from {
+        transform: translateX(-100%);
+        opacity: 0;
+          }
+          to {
+        transform: translateX(0);
+        opacity: 1;
+          }
+        }
+      </style>
     </div>
+
+
   </div>
 </div>
 </section>
@@ -179,8 +189,8 @@
             </div>
         </div>
       </div>
-      <div class="col-md-3 d-flex flex-column justify-content-center align-items-center order-0 order-md-1" data-aos="fade-left" data-aos-delay="100">
-        <p style="color: white; text-align: justify;">En GENBA, somos un equipo apasionado de ingenieros y diseñadores dedicados a 
+      <div class="col-md-5 d-flex flex-column justify-content-center align-items-center order-0 order-md-1" data-aos="fade-left" data-aos-delay="100">
+        <p style="color: white; text-align: left;">En GENBA, somos un equipo apasionado de ingenieros y diseñadores dedicados a 
           ofrecer soluciones innovadoras y personalizadas para tus proyectos. Con años de experiencia en la industria, 
           nos especializamos en el diseño y fabricación de moldes de inyección, así como en la creación de prototipos y 
           piezas de producción. Nuestro compromiso es brindarte la mejor calidad y servicio al cliente.</p>
@@ -205,7 +215,7 @@
 <section id="galeria" class="py-5" data-aos="fade-up" style="background-color: #0834a23f;">
   <div id="jumbotron-container" style="background-color: transparent;">
     <!-- Jumbotron 1 -->
-    <div class="jumbotron-section" id="jumbotron-1" style="background-color: transparent;">
+    <div class="jumbotron-section" id="jumbotron-1" style="background-color: transparent;" data-aos="fade-right">
       <div class="container-fluid" style="background-color: transparent;">
         <div class="row" style="background-color: transparent;">
           <div class="col-12" style="background-color: transparent;">
@@ -297,6 +307,23 @@
                       <div class="col-md-4 col-4  d-flex justify-content-between align-items-center">
                         <div class="image-container" style="width: 200px; height: 100px; background-color: transparent; transform: skewX(-10deg); border: 2px solid white; overflow: hidden;"  onclick="openImage(this)">
                           <img src="img/Dis_piezas_metalicas/met6-Editada.jpg" alt="Molde 3" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mb-3 offset-md-1">
+                      <div class="col-md-4 col-4 d-flex justify-content-between align-items-center">
+                        <div class="image-container" style="width: 200px; height: 100px; background-color: transparent; transform: skewX(-10deg); border: 2px solid white; overflow: hidden;"  onclick="openImage(this)">
+                          <img src="img/Dis_piezas_metalicas/Carro Nivea.jpg" alt="Molde 1" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
+                        </div>
+                      </div>
+                      <div class="col-md-4  col-4  d-flex justify-content-between align-items-center">
+                        <div class="image-container" style="width: 200px; height: 100px; background-color: transparent; transform: skewX(-10deg); border: 2px solid white; overflow: hidden;" onclick="openImage(this)">
+                          <img src="img/Dis_piezas_metalicas/Carro VMI 1.jpg" alt="Molde 2" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-4  d-flex justify-content-between align-items-center">
+                        <div class="image-container" style="width: 200px; height: 100px; background-color: transparent; transform: skewX(-10deg); border: 2px solid white; overflow: hidden;"  onclick="openImage(this)">
+                          <img src="img/Dis_piezas_metalicas/Cuchilla inox.jpg" alt="Molde 3" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
                         </div>
                       </div>
                     </div>
@@ -429,7 +456,7 @@
   </style>
 </section>
 <!--modal para imagen extendida-->
-<div id="image-modal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 80%; height: 30%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center;">
+<div id="image-modal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 35%; height: 80%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center;">
   <img id="modal-image" src="" alt="Expanded Image" style="max-width: 100%; max-height: 100%; border: 5px solid white; border-radius: 10px;">
   <span onclick="closeImage()" style="position: absolute; top: 20px; right: 20px; color: white; font-size: 30px; cursor: pointer;">&times;</span>
 </div>
@@ -451,11 +478,12 @@
 <!-- Contacto -->
 <section id="contacto" class="py-5" data-aos="fade-left" style="background-color: white;">
   <div class="container rounded" style="background-color: whitesmoke;">
-    <h2 class="text-center mb-5" style="color: black;">Contáctanos</h2>
+    <h2 class="text-center mb-5 wordart-text" style="color: black;">Contáctanos</h2>
     <div class="row">
       <div class="col-md-6 d-flex flex-column align-items-center" data-aos="fade-left" data-aos-delay="100">
-        <img src="img/contacto.jpeg" alt="Imagen de Contacto" class="img-fluid rounded mb-4" style="max-width: 100%; height:300px;">
-        <p style="color: black; text-align: center;">Si tienes alguna pregunta o necesitas más información, no dudes en ponerte en contacto con nosotros. Estamos aquí para ayudarte.</p>
+        <img src="img/clientes.jpg" alt="Imagen de Contacto" class="img-fluid rounded mb-4" style="width: 400px; height:300px;">
+        <p style="color: black; text-align: center;">Si tienes alguna pregunta o necesitas más información,</p>
+        <p> no dudes en ponerte en contacto con nosotros.</p>
       </div>
       <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
         <form action="/php/send_email.php" method="POST">
