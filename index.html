@@ -32,7 +32,7 @@
     loadingScreen.style.display = 'none';
   });
 </script>
-<nav class="navbar navbar-expand-lg" id="main-navbar" style="background-color: transparent;">
+<nav class="navbar navbar-expand-lg tam-menu" id="main-navbar" style="background-color: transparent;">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="img/Genba_Blanco.png" alt="Genba Logo" style="max-height: 90px; ">
@@ -110,9 +110,7 @@
       align-items: left;
     }
 
-    .navbar-nav .nav-item {
-      margin-bottom: 10px;
-    }
+   
   }
 </style>
 
@@ -137,8 +135,8 @@
         <h2 class="wordart-text align-items">EN TUS PROYECTOS</h2>
       </div>
     <div class="col-md-4 d-flex justify-content-center align-items-center">
-      <img src="img/moldes/molde5.png" alt="Proyectos" style="z-index: 1; width: 250px; height: 200px; left: 0%; animation: slideRight 2s ease-in-out; ">
-      <img src="img/moldes/molde5.png" alt="Proyectos" style="z-index: 1; width: 250px; height: 200px; left: 10%;animation: slideRight 2s ease-in-out; ">
+      <img src="img/moldes/molde5.png" alt="Proyectos" class="imagen_torno" style="z-index: 1;  left: 0%; animation: slideRight 2s ease-in-out; ">
+      <img src="img/moldes/molde5.png" alt="Proyectos" class="imagen_torno" style="z-index: 1;  left: 10%;animation: slideRight 2s ease-in-out; ">
 
       <style>
         @keyframes slideRight {
@@ -273,7 +271,7 @@ calidad y precisión.
                   </div>
                 </div>
                 <div class="col-md-6">
-                  <video autoplay muted loop style="width: 80%; height: auto; border-radius: 10px;" controlslist="nodownload noremoteplayback noaudio">
+                  <video autoplay muted loop style="width: 80%; height: auto; border-radius: 10px;">
                     <source src="videos/video3.webm" type="video/webm">
                     Tu navegador no soporta la reproducción de videos.
                   </video>
@@ -342,9 +340,9 @@ realizado.
                     </div>
                   </div>
                     <div class="col-md-6 d-flex justify-content-center align-items-center">
-                      <video autoplay muted loop playsinline style="width: 80%; height: auto; border-radius: 10px;" controlslist="nodownload noremoteplayback noaudio">
-                        <source src="videos/video2.webm" type="video/webm">
-                        Tu navegador no soporta la reproducción de videos.
+                      <video autoplay muted loop playsinline style="width: 80%; height: auto; border-radius: 10px;">
+                      <source src="videos/video2.webm" type="video/webm">
+                      Tu navegador no soporta la reproducción de videos.
                       </video>
                     </div>
                 </div>
@@ -362,7 +360,7 @@ realizado.
                 <div class="jumbotron text-center py-5" style="background-color: transparent; color: white;">
                   <div class="row">
                     <div class="col-md-6">
-                      <h3 class="display-4 wordart-text-small">PAILERIA</h3>
+                      <h3 class="display-4 wordart-text-small">PAILERÍA</h3>
                       <div class="row">
                         <div class="col-md-11 offset-md-1 d-flex justify-content-center align-items-center">
                           <p style="color: white; text-align: justify;">En GENBA, diseñamos y fabricamos estructuras metálicas, trolleys y dispositivos 
@@ -468,7 +466,7 @@ nosotros le ayudamos a plasmarlo en un diseño.</p>
                     Tu navegador no soporta la reproducción de videos.
                   </video>-->
                   <div class="image-container" style="width: 100%; height: 100%; background-color: transparent;  overflow: hidden;"  onclick="openImage(this)">
-                          <img src="img/Dis_industrial/dis4.png" alt="Molde 3" style="width: 60%; height: 500px; transition: transform 0.3s;">
+                          <img src="img/Dis_industrial/dis4.png" alt="Molde 3" style="width: 35%; height: 400px; transition: transform 0.3s;">
                         </div>
                 </div>
                 </div>
@@ -535,7 +533,7 @@ nosotros le ayudamos a plasmarlo en un diseño.</p>
         <p> no dudes en ponerte en contacto con nosotros.</p>
       </div>
       <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
-        <form action="/php/send_email.php" method="POST">
+        <form id="contactForm" action="/php/send_email.php" method="POST">
           <div class="mb-3">
             <label for="name" class="form-label">Nombre</label>
             <input type="text" class="form-control" id="name" name="name" required>
@@ -558,6 +556,18 @@ nosotros le ayudamos a plasmarlo en un diseño.</p>
     </div>
   </div>
 </section>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Simulate form submission (e.g., AJAX or server-side handling)
+    alert('Tu mensaje ha sido enviado con éxito');
+
+    // Clear the form fields
+    this.reset();
+  });
+</script>
 
 <!-- Footer -->
 <footer class="bg-dark text-white py-4">

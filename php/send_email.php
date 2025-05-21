@@ -10,7 +10,7 @@ function sendEmailPost() {
         ini_set('smtp_port', '465'); // Configura el puerto SMTP
         $to = $_POST['to'];
         $subject = $_POST['subject'];
-        $message = $_POST['message'];
+        $message = $_POST['message'] . "\n\n" . $_POST['email'];
         $headers = "From: no-reply@genba-ingenieria.com";
 
         // Enviar el correo
