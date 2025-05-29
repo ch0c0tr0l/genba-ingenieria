@@ -20,7 +20,15 @@ body {
     font-family: "Anta", sans-serif;
     font-weight: bold;
     font-style:italic;
-    font-size: 60px;
+    font-size: 130px;
+    text-shadow: 2px 2px 4px black;
+   
+  }
+  .wordart-text-P {
+    font-family: "Anta", sans-serif;
+    font-weight: bold;
+    font-style:italic;
+    font-size: 30px;
     text-shadow: 2px 2px 4px black;
    
   }
