@@ -4,20 +4,6 @@ body {
   position: relative;
 }
 
-body::before {
-  content: '';
-  position: fixed;
-  inset: 0;
-  pointer-events: none;
-  z-index: 0;
-  background: inherit;
-
-  /* Efecto blur en la esquina superior derecha */
-  mask-image: radial-gradient( circle at 90% 100%, black 20%, transparent 90%);
-  -webkit-mask-image: radial-gradient(circle at 90% 100%, black 20%, transparent 90%);
-  filter: blur(50px);
-}
-
 .logo{
   width: 60px;
   height: 60px;

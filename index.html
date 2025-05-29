@@ -130,31 +130,23 @@
 <section id="home">
   <div class="container-fluid text-center py-5 d-flex justify-content-center align-items-center position-relative" style="height: 70vh;">
     <div class="row">
-      <div class="col-md-8 text-white position-relative" style="z-index: 2;" data-aos="fade-left" data-aos-duration="1000">
-        <h2 class="wordart-text">SOMOS EL MEJOR ALIADO </h2>
-        <h2 class="wordart-text align-items">EN TUS PROYECTOS</h2>
+      <div class="col-md-12 text-white" style="z-index: 2;" data-aos="fade-left" data-aos-duration="1000">
+        <h1 class="wordart-text">SOMOS EL MEJOR ALIADO EN TUS PROYECTOS</h1>
       </div>
-    <div class="col-md-4 d-flex justify-content-center align-items-center">
-      <img src="img/moldes/molde5.png" alt="Proyectos" class="imagen_torno" style="z-index: 1;  left: 0%; animation: slideRight 2s ease-in-out; ">
-      <img src="img/moldes/molde5.png" alt="Proyectos" class="imagen_torno" style="z-index: 1;  left: 10%;animation: slideRight 2s ease-in-out; ">
-
-      <style>
-        @keyframes slideRight {
-          from {
-        transform: translateX(-100%);
-        opacity: 0;
-          }
-          to {
-        transform: translateX(0);
-        opacity: 1;
-          }
-        }
-      </style>
-    </div>
-
-
   </div>
 </div>
+</section>
+<section id="Robotica" style="background: linear-gradient(135deg, #0833a2 0%, black 100%);">
+  <div class="container-fluid d-flex justify-content-center align-items-center position-relative" style="height: 70vh;">
+    <div class="row w-100">
+      <div class="col-md-12 text-white text-center" style="z-index: 2;" data-aos="fade-left" data-aos-duration="1000">
+        <h2 class="wordart-text text-center">SOLUCIONES EN AUTOMATIZACIÓN</h2>
+        <div class="d-flex justify-content-center">
+          <button class="btn btn-light mt-6" onclick="window.location.href='https://iaramx.com/'">Ver más</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <!-- Galería -->
@@ -358,10 +350,43 @@ realizado.
       </div>
     </div>
 
-    <div class="text-center my-4">
+    <div class="text-center my-4 offset-md-1">
       <div class="d-flex justify-content-start align-items-center">
-        <div class="circle-btn mx-2" onclick="showJumbotron('jumbotron-1')" style="width: 20px; height: 20px; background-color: #0833a2; border-radius: 50%; cursor: pointer; border: 2px solid white; z-index: 10; position: relative;"></div>
-        <div class="circle-btn mx-2" onclick="showJumbotron('jumbotron-2')" style="width: 20px; height: 20px; background-color: #0833a2; border-radius: 50%; cursor: pointer; border: 2px solid white; z-index: 10; position: relative;"></div>
+        <div class="circle-btn mx-2" onclick="showJumbotron('jumbotron-1')" style="width: 30px; height: 25px; background-color: #0833a2; border-radius: 30%; cursor: pointer; border: 2px solid white; z-index: 10; position: relative;">
+          <span class="circle-tooltip">Maquinado</span>
+        </div>
+        <div class="circle-btn mx-2" onclick="showJumbotron('jumbotron-2')" style="width: 30px; height: 25px; background-color: #0833a2; border-radius: 30%; cursor: pointer; border: 2px solid white; z-index: 10; position: relative;">
+          <span class="circle-tooltip">Instalaciones</span>
+        </div>
+        <style>
+          .circle-btn {
+            position: relative;
+            display: inline-block;
+          }
+          .circle-tooltip {
+            visibility: hidden;
+            opacity: 0;
+            width: max-content;
+           background-color: #0834a2ac;
+            color: #fff;
+            text-align: center;
+            border-radius: 6px;
+            padding: 30px 10px;
+            position: absolute;
+            z-index: 20;
+            bottom: 130%;
+            left: 50%;
+            transform: translateX(-50%);
+            transition: opacity 0.2s;
+            font-size: 13px;
+            pointer-events: none;
+            white-space: nowrap;
+          }
+          .circle-btn:hover .circle-tooltip {
+            visibility: visible;
+            opacity: 2;
+          }
+        </style>
       </div>
     </div>
   </div>
