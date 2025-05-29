@@ -11,9 +11,9 @@
   <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
   <!-- Estilos personalizados -->
   <link rel="stylesheet" href="css/style.css">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Anta&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Anta&family=Bebas+Neue&display=swap" rel="stylesheet">
 </head>
 <body>
 
@@ -266,7 +266,7 @@ calidad y precisión.
                 <div class="col-md-6">
                   <div style="position: relative; width: 80%; margin: 0 auto;">
                     <video id="video1" autoplay muted controls loop style="width: 100%; height: auto; border-radius: 10px;">
-                      <source src="videos/video3.webm" type="video/webm">
+                        <source src="videos/maquinados.MP4" type="video/mp4">
                       Tu navegador no soporta la reproducción de videos.
                     </video>
                   </div>                 
@@ -337,7 +337,7 @@ realizado.
                     <div class="col-md-6 d-flex justify-content-center align-items-center">
                       <div style="position: relative; width: 80%; margin: 0 auto;">
                         <video id="video2" autoplay muted controls loop style="width: 100%; height: auto; border-radius: 10px;">
-                          <source src="videos/video2.webm" type="video/webm">
+                          <source src="videos/instalaciones.MP4" type="video/mp4">
                           Tu navegador no soporta la reproducción de videos.
                         </video>
                       </div>
@@ -353,39 +353,23 @@ realizado.
 
     <div class="text-center my-4 offset-md-1">
       <div class="d-flex justify-content-start align-items-center">
-        <div class="circle-btn mx-2" onclick="showJumbotron('jumbotron-1')" style="width: 30px; height: 25px; background-color: #0833a2; border-radius: 30%; cursor: pointer; border: 2px solid white; z-index: 10; position: relative;">
-          <span class="circle-tooltip">Maquinado</span>
-        </div>
-        <div class="circle-btn mx-2" onclick="showJumbotron('jumbotron-2')" style="width: 30px; height: 25px; background-color: #0833a2; border-radius: 30%; cursor: pointer; border: 2px solid white; z-index: 10; position: relative;">
-          <span class="circle-tooltip">Instalaciones</span>
-        </div>
+        <button class="btn btn-primary mx-2 galeria-btn" onclick="showJumbotron('jumbotron-1')" style="border-radius: 20px;">
+          Diseño y Maquinado
+        </button>
+        <button class="btn btn-primary mx-2 galeria-btn" onclick="showJumbotron('jumbotron-2')" style="border-radius: 20px;">
+          Instalaciones
+        </button>
         <style>
-          .circle-btn {
-            position: relative;
-            display: inline-block;
+          .galeria-btn {
+            background-color: #0833a2;
+            border: 2px solid white;
+            color: white;
+            transition: background 0.3s, color 0.3s, border 0.3s;
           }
-          .circle-tooltip {
-            visibility: hidden;
-            opacity: 0;
-            width: max-content;
-           background-color: #0834a2ac;
-            color: #fff;
-            text-align: center;
-            border-radius: 6px;
-            padding: 30px 10px;
-            position: absolute;
-            z-index: 20;
-            bottom: 130%;
-            left: 50%;
-            transform: translateX(-50%);
-            transition: opacity 0.2s;
-            font-size: 13px;
-            pointer-events: none;
-            white-space: nowrap;
-          }
-          .circle-btn:hover .circle-tooltip {
-            visibility: visible;
-            opacity: 2;
+          .galeria-btn:hover {
+            background-color: white;
+            color: #0833a2;
+            border: 2px solid #0833a2;
           }
         </style>
       </div>
