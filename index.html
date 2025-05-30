@@ -138,13 +138,68 @@
 </div>
 </section>
 <section id="Robotica" style="background: linear-gradient(135deg, #0833a2 0%, black 100%);">
-  <div class="container-fluid d-flex justify-content-center align-items-center position-relative" style="height: 70vh;">
-    <div class="row w-100">
+  <div class="container-fluid d-flex justify-content-center align-items-center position-relative" style="height: 50vh;">
+    <div class="row w-50">
       <div class="col-md-12 text-white text-center" style="z-index: 2;" data-aos="fade-left" data-aos-duration="1000">
         <h2 class="wordart-text-small text-center">SOLUCIONES EN AUTOMATIZACIÓN</h2>
         <div class="d-flex justify-content-center">
-          <button class="btn btn-light mt-6" onclick="window.location.href='#home'">Ver más</button>
+          <button class="btn btn-light mt-6" onclick="toggleSoluciones()">Ver más</button>
         </div>
+        <div id="soluciones-extra" style="display: none; margin-top: 20px; opacity: 0; transition: opacity 0.7s;">
+          <div class="row justify-content-center">
+            <p class="wordart-text-P">Nos dedicamos a ofrecer soluciones completas en automatización industrial. Nuestro compromiso es 
+              proporcionar equipos de alta tecnología, así como servicios de reparación y mantenimiento que aseguren la continuidad y eficiencia 
+              de tus operaciones.</p>
+            <div class="col-md-4 mb-4">
+               <div class="card h-70" style="background: rgba(255,255,255,0.1); border: 1px solid #fff; box-shadow: 0 2px 8px rgba(8,51,162,0.1);">
+                <img src="img/11.png" class="card-img-top" alt="Programación Bootstrap" style="background: transparent;">
+                <div class="card-body">
+                  <h5 class="card-title" style="color: white;" >Mantenimiento</h5>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card h-70" style="background: rgba(255,255,255,0.1); border: 1px solid #fff; box-shadow: 0 2px 8px rgba(8,51,162,0.1);">
+              <img src="img/12.png" class="card-img-top" style="background: transparent;">
+              <div class="card-body">
+                <h5 class="card-title" style="color: white;">Programación</h5>
+              </div>
+              </div>
+            </div>
+            <div class="col-md-4 mb-4">
+              <div class="card h-70" style="background: rgba(255,255,255,0.1); border: 1px solid #fff; box-shadow: 0 2px 8px rgba(8,51,162,0.1);">
+                <img src="img/10.png" class="card-img-top" style="background: transparent;">
+                <div class="card-body">
+                  <h5 class="card-title" style="color: white;">Capacitación</h5>
+                </div>
+              </div>
+            </div>
+          </div>
+          <button class="btn btn-secondary mt-3" onclick="toggleSoluciones(false)">Ver menos</button>
+        </div>
+        <script>
+          function toggleSoluciones(expand = true) {
+            const section = document.getElementById('Robotica');
+            const extraDiv = document.getElementById('soluciones-extra');
+            section.style.transition = 'height 0.7s cubic-bezier(0.4,0,0.2,1)';
+            if (expand) {
+              section.style.height = '100vh';
+              extraDiv.style.display = 'block';
+              setTimeout(() => {
+          extraDiv.style.opacity = '1';
+              }, 10);
+              event.target.style.display = 'none';
+            } else {
+              extraDiv.style.opacity = '0';
+              setTimeout(() => {
+          extraDiv.style.display = 'none';
+          section.style.height = '50vh';
+          section.querySelector('button.btn-light').style.display = 'inline-block';
+              }, 700);
+            }
+          }
+        </script>
+        
       </div>
     </div>
   </div>
@@ -357,7 +412,7 @@ realizado.
           Diseño y Maquinado
         </button>
         <button class="btn btn-primary mx-2 galeria-btn" onclick="showJumbotron('jumbotron-2')" style="border-radius: 20px;">
-          Instalaciones
+          Automatización e Instalaciones
         </button>
         <style>
           .galeria-btn {
