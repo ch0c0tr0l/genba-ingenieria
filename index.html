@@ -138,13 +138,16 @@
 </div>
 </section>
 <section id="Robotica" style="background: linear-gradient(135deg, #0833a2 0%, black 100%);">
-  <div class="container-fluid d-flex justify-content-center align-items-center position-relative" style="height: 50vh;">
+  <div class="container-fluid d-flex justify-content-center align-items-center position-relative" style="height: auto;">
     <div class="row w-50">
       <div class="col-md-12 text-white text-center" style="z-index: 2;" data-aos="fade-left" data-aos-duration="1000">
-        <h2 class="wordart-text-small text-center">SOLUCIONES EN AUTOMATIZACIÓN</h2>
+        <h1 class="wordart-text-small text-center" style="padding-top: 40px;">SOLUCIONES EN AUTOMATIZACIÓN</h1>
+        <br><br>
         <div class="d-flex justify-content-center">
           <button class="btn btn-light mt-6" onclick="toggleSoluciones()">Ver más</button>
         </div>
+        <br><br>
+        
         <div id="soluciones-extra" style="display: none; margin-top: 20px; opacity: 0; transition: opacity 0.7s;">
           <div class="row justify-content-center">
             <p class="wordart-text-P">Nos dedicamos a ofrecer soluciones completas en automatización industrial. Nuestro compromiso es 
@@ -183,7 +186,7 @@
             const extraDiv = document.getElementById('soluciones-extra');
             section.style.transition = 'height 0.7s cubic-bezier(0.4,0,0.2,1)';
             if (expand) {
-              section.style.height = '100vh';
+              section.style.height = 'auto';
               extraDiv.style.display = 'block';
               setTimeout(() => {
           extraDiv.style.opacity = '1';
@@ -192,10 +195,10 @@
             } else {
               extraDiv.style.opacity = '0';
               setTimeout(() => {
-          extraDiv.style.display = 'none';
-          section.style.height = '50vh';
-          section.querySelector('button.btn-light').style.display = 'inline-block';
-              }, 700);
+              extraDiv.style.display = 'none';
+              section.style.height = 'auto';
+              section.querySelector('button.btn-light').style.display = 'inline-block';
+              }, 700); // Espera a que termine la transición de opacidad (0.7s)
             }
           }
         </script>
