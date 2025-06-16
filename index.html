@@ -10,7 +10,7 @@
   <link rel="icon" href="img/genba.png" type="image/x-icon">
   <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
   <!-- Estilos personalizados -->
-  <link rel="stylesheet" href="css/stylev1.css">
+  <link rel="stylesheet" href="css/stylev2.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anta&family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -54,6 +54,9 @@
         <li class="nav-item">
           <a class="nav-link" href="#contacto">Contacto</a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Robotica">Automatización</a>
+        </li>
       </ul>
     </div>
   </div>
@@ -84,35 +87,6 @@
 
   });
 </script>
-<style>
-  #main-navbar {
-    background-color: white;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    transition: background-color 0.3s;
-    width: 100%;
-  }
-
-  .navbar-nav .nav-link {
-    color: white;
-    font-size: 16px;
-    transition: color 0.3s;
-  }
-
-  .navbar-nav .nav-link:hover {
-    color: #0833a2;
-  }
-
-  @media (max-width: 760px) {
-    .navbar-nav {
-      flex-direction:column-reverse;
-      align-items: left;
-    }
-
-   
-  }
-</style>
 
 <script>
   window.addEventListener('scroll', function () {
@@ -131,11 +105,63 @@
   <div class="container-fluid text-center py-5 d-flex justify-content-center align-items-center position-relative" style="height: 90vh;">
     <div class="row">
       <div class="col-md-12 text-white" style="z-index: 2;" data-aos="fade-left" data-aos-duration="1000">
-        <h1 class="wordart-text">GENBA</h1>
+        <h1 class="wordart-text" style="width: 1000px;">GENBA</h1>
         <p class="wordart-text-P">SOMOS EL MEJOR ALIADO EN TUS PROYECTOS</P>
       </div>
   </div>
 </div>
+</section>
+
+<!-- Galería -->
+
+
+
+<!-- nosotros -->
+<section id="nosotros" class="py-5" data-aos="fade-right" style="background-color: #0834a23f;">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3 offset-md-3 d-flex flex-column align-items-center order-1 order-md-0">
+        <div class="row">
+            <div class="col-md-2 col-ls-2 d-flex justify-content-start align-items-end d-none d-md-flex">
+            <div style="width: 60px; height: 130px; background-color: #0833a2; transform: skewX(-10deg);"></div> <!-- Paralelogramo -->
+            </div>
+          <div class="col-md-8 col-ls-2 d-flex justify-content-center align-items-center">
+            <div style="width: 150px; height: 380px; background-color: #0833a2; transform: skewX(-10deg); position: relative; overflow: visible; display: flex; flex-direction: column; justify-content: flex-end; align-items: center;" class="nosotros-container">
+              <h1 style="color: white; margin-bottom: 20px; position: relative;" class="wordart-text">NOSOTROS</h1>
+            </div>
+            <style>
+              @media (max-height: 800px) {
+              .nosotros-container {
+                height: 190px;
+              }
+              }
+            </style>
+          </div>
+            <div class="col-md-2 col-ls-2 d-flex align-items-start d-none d-md-flex">
+            <div style="width: 60px; height: 130px; background-color: #0833a2; transform: skewX(-10deg);"></div>
+            </div>
+        </div>
+      </div>
+      <div class="col-md-5 d-flex flex-column justify-content-center align-items-center order-0 order-md-1" data-aos="fade-left" data-aos-delay="100">
+        <p style="color: white; text-align: left;">Somos una empresa enfocada en la provisión de servicios y productos integrales. Brindamos soluciones a nuestros clientes a través de nuestros servicios de automatización, desarrollo de ingeniería, diseño y maquinados.</p>
+        <p style="color: white; text-align: left;">Nuestro compromiso es entregar productos y servicios con altos estándares de calidad que satisfagan las necesidades de nuestros clientes. Innovamos continuamente nuestros procesos para lograr una mayor calidad en cada uno de ellos y, de esta manera, ofrecer productos de calidad a un precio competitivo y con un tiempo de respuesta oportuno.</p>
+      </div>
+    </div>
+  </div>
+  <style>
+    @media (max-width: 800px) {
+      #nosotros .row {
+        flex-direction: column-reverse;
+      }
+      #nosotros .col-md-3.offset-md-3 {
+        align-items: flex-start;
+      }
+      #nosotros .col-md-3 {
+        align-items: flex-end;
+        text-align: right;
+      }
+    }
+  </style>
 </section>
 <section id="Robotica" style="background: linear-gradient(135deg, #0833a2 0%, black 100%);">
   <div class="container-fluid d-flex justify-content-center align-items-center position-relative" style="height: auto;">
@@ -150,30 +176,46 @@
         
         <div id="soluciones-extra" style="display: none; margin-top: 20px; opacity: 0; transition: opacity 0.7s;">
           <div class="row justify-content-center">
-            <p class="wordart-text-P">Nos dedicamos a ofrecer soluciones completas en automatización industrial. Nuestro compromiso es 
-              proporcionar equipos de alta tecnología, así como servicios de reparación y mantenimiento que aseguren la continuidad y eficiencia 
-              de tus operaciones.</p>
-            <div class="col-md-4 mb-4">
-               <div class="card h-70" style="background: rgba(255,255,255,0.1); border: 1px solid #fff; box-shadow: 0 2px 8px rgba(8,51,162,0.1);">
-                <img src="img/11.png" class="card-img-top" alt="Programación Bootstrap" style="background: transparent;">
-                <div class="card-body">
-                  <h5 class="card-title" style="color: white;" >Mantenimiento</h5>
+            <p class="wordart-text-P">Nos especializamos en ofrecer soluciones integrales en automatización industrial. Nuestro compromiso es proporcionar equipos de vanguardia, así como servicios de capacitación, mantenimiento y programación que garanticen la continuidad y eficiencia de sus operaciones.</p>
+            <div class="row">
+              <div class="col-md-4 mb-4 d-flex">
+                <div class="card h-100 w-100" style="background: rgba(255,255,255,0.1); border: 1px solid #fff; box-shadow: 0 2px 8px rgba(8,51,162,0.1); display: flex; flex-direction: column;">
+                  <img src="img/11.png" class="card-img-top" alt="Programación Bootstrap" style="background: transparent;">
+                  <div class="card-body flex-grow-1 d-flex flex-column">
+                    <h5 class="card-title" style="color: white;">Control</h5>
+                    <ul  style="color: white; padding-left: 1.2em;">
+                      <li>Mantenimiento a equipos de control</li>
+                      <li>Armado de equipos de contro</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="col-md-4 mb-4">
-              <div class="card h-70" style="background: rgba(255,255,255,0.1); border: 1px solid #fff; box-shadow: 0 2px 8px rgba(8,51,162,0.1);">
-              <img src="img/12.png" class="card-img-top" style="background: transparent;">
-              <div class="card-body">
-                <h5 class="card-title" style="color: white;">Programación</h5>
+              <div class="col-md-4 mb-4 d-flex">
+                <div class="card h-100 w-100" style="background: rgba(255,255,255,0.1); border: 1px solid #fff; box-shadow: 0 2px 8px rgba(8,51,162,0.1); display: flex; flex-direction: column;">
+                  <img src="img/12.png" class="card-img-top" style="background: transparent;">
+                  <div class="card-body flex-grow-1 d-flex flex-column">
+                    <h5 class="card-title" style="color: white;">Programación</h5>
+                    <ul style="color: white; padding-left: 1.2em;">
+                      <li>Delta</li>
+                      <li>Siemens</li>
+                      <li>Power Flex</li>
+                      <li>Y otros.</li>
+                    </ul>
+                  </div>
+                </div>
               </div>
-              </div>
-            </div>
-            <div class="col-md-4 mb-4">
-              <div class="card h-70" style="background: rgba(255,255,255,0.1); border: 1px solid #fff; box-shadow: 0 2px 8px rgba(8,51,162,0.1);">
-                <img src="img/10.png" class="card-img-top" style="background: transparent;">
-                <div class="card-body">
-                  <h5 class="card-title" style="color: white;">Capacitación</h5>
+              <div class="col-md-4 mb-4 d-flex">
+                <div class="card h-100 w-100" style="background: rgba(255,255,255,0.1); border: 1px solid #fff; box-shadow: 0 2px 8px rgba(8,51,162,0.1); display: flex; flex-direction: column;">
+                  <img src="img/10.png" class="card-img-top" style="background: transparent;">
+                  <div class="card-body flex-grow-1 d-flex flex-column">
+                    <h5 class="card-title" style="color: white;">Capacitación</h5>
+                    <ul  style="color: white; padding-left: 1.2em;">
+                      <li>Controladores Lógicos Programables (PLC)</li>
+                      <li>Servomotores</li>
+                      <li>Interfaces Hombre-Máquina (HMI)</li>
+                      <li>Variadores de Frecuencia</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
@@ -257,7 +299,7 @@
 
 
 <!-- nosotros -->
-<section id="nosotros" class="py-5" data-aos="fade-right" style="background-color: #0834a23f;">
+<section id="nosotros" class="py-5" data-aos="fade-right">
   <div class="container-fluid">
     <div class="row">
       <div class="col-md-3 offset-md-3 d-flex flex-column align-items-center order-1 order-md-0">
@@ -330,38 +372,38 @@ calidad y precisión.
                     </div>
                     <div class="row mb-3 offset-md-1">
                       <div class="col-md-4 col-4 d-flex justify-content-between align-items-center">
-                        <div class="image-container" style="width: 250px; height: 150px; background-color: transparent; transform: skewX(-10deg);  overflow: hidden;"  onclick="openImage(this)">
-                          <img src="img/Dis_piezas_metalicas/met2-editada.png" alt="Molde 1" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
+                        <div class="image-container" style="width: 200px; height: 100px; background-color: transparent; transform: skewX(-10deg); border: 2px solid white; overflow: hidden;"  onclick="openImage(this)">
+                          <img src="img/Dis_piezas_metalicas/met2-Editada.jpg" alt="Molde 1" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
                         </div>
                       </div>
                       <div class="col-md-4  col-4  d-flex justify-content-between align-items-center">
-                        <div class="image-container" style="width: 250px; height: 150px; background-color: transparent; transform: skewX(-10deg); border: 2px solid white; overflow: hidden;" onclick="openImage(this)">
+                        <div class="image-container" style="width: 200px; height: 100px; background-color: transparent; transform: skewX(-10deg); border: 2px solid white; overflow: hidden;" onclick="openImage(this)">
                           <img src="img/Dis_piezas_metalicas/met4-Editada.jpg" alt="Molde 2" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
                         </div>
                       </div>
                       <div class="col-md-4 col-4  d-flex justify-content-between align-items-center">
-                        <div class="image-container" style="width: 250px; height: 150px; background-color: transparent; transform: skewX(-10deg); border: 2px solid white; overflow: hidden;"  onclick="openImage(this)">
+                        <div class="image-container" style="width: 200px; height: 100px; background-color: transparent; transform: skewX(-10deg); border: 2px solid white; overflow: hidden;"  onclick="openImage(this)">
                           <img src="img/Dis_piezas_metalicas/met6-Editada.jpg" alt="Molde 3" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
                         </div>
                       </div>
                     </div>
                     <div class="row mb-3 offset-md-1">
                       <div class="col-md-4 col-4 d-flex justify-content-between align-items-center">
-                        <div class="image-container" style="width: 250px; height: 150px; background-color: transparent; transform: skewX(-10deg); border: 2px solid white; overflow: hidden;"  onclick="openImage(this)">
+                        <div class="image-container" style="width: 200px; height: 100px; background-color: transparent; transform: skewX(-10deg); border: 2px solid white; overflow: hidden;"  onclick="openImage(this)">
                           <img src="img/Dis_piezas_metalicas/met8.jpeg" alt="Molde 1" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
                         </div>
                       </div>
                       <div class="col-md-4  col-4  d-flex justify-content-between align-items-center">
-                        <div class="image-container" style="width: 250px; height: 150px; background-color: transparent; transform: skewX(-10deg); border: 2px solid white; overflow: hidden;" onclick="openImage(this)">
+                        <div class="image-container" style="width: 200px; height: 100px; background-color: transparent; transform: skewX(-10deg); border: 2px solid white; overflow: hidden;" onclick="openImage(this)">
                           <img src="img/Dis_piezas_metalicas/met3.jpeg" alt="Molde 2" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
                         </div>
                       </div>
                       <div class="col-md-4 col-4  d-flex justify-content-between align-items-center">
-                        <div class="image-container" style="width: 250px; height: 150px; background-color: transparent; transform: skewX(-10deg); border: 2px solid white; overflow: hidden;"  onclick="openImage(this)">
+                        <div class="image-container" style="width: 200px; height: 100px; background-color: transparent; transform: skewX(-10deg); border: 2px solid white; overflow: hidden;"  onclick="openImage(this)">
                           <img src="img/Dis_piezas_metalicas/Cuchilla inox.jpg" alt="Molde 3" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
                         </div>
                       </div>
-                    </div>
+                    </div>  
                     
                   </div>
                 </div>
@@ -388,14 +430,11 @@ calidad y precisión.
               <div class="col-12">
                 <div class="row" style="background-color: transparent;">
                   <div class="col-md-6" style="background-color: transparent;">
-                    <h3 class="display-4 wordart-text-small">Instalaciones</h3>
+                    <h3 class="display-4 wordart-text-small">Automatización e intalaciones</h3>
                     <div class="row" style="background-color: transparent;">
                       <div class="col-md-11 offset-md-1 d-flex justify-content-center align-items-center">
                         <p style="color: white; text-align: justify;">
-                          Contamos con amplia experiencia en instalaciones eléctricas, neumáticas e 
-hidráulicas. Ofrecemos soluciones seguras y eficientes para proyectos industriales y 
-comerciales. Nuestro equipo garantiza calidad y cumplimiento en cada trabajo 
-realizado.
+                          Contamos con amplia experiencia en programación de HMI, PLC, SERVOS, VARIADORES, así como en instalaciones eléctricas, neumáticas e hidráulicas. Ofrecemos soluciones integrales a sus proyectos, asegurando la eficiencia de cada uno de ellos.
                         </p>
                       </div>
                       <div class="row mb-3 offset-md-1">
@@ -569,7 +608,7 @@ realizado.
 </footer>
 
 <!-- Botón WhatsApp -->
-<a class="whatsapp-float" href="https://wa.me/525647889600" target="_blank" title="Escríbenos por WhatsApp">
+<a class="whatsapp-float" href="https://wa.me/524772386417" target="_blank" title="Escríbenos por WhatsApp">
   <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
 </a>
 
