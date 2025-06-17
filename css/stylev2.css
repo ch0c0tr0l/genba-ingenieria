@@ -117,7 +117,14 @@ body {
 
 @media (max-width: 400px) {
   body {
-    background-size: cover;
+    background: url('../img/Electrica/ele15.jpg') no-repeat center center fixed;
+  background-size: 100vw auto;
+  background-position: center top;
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+
   }
 
   .logo {
@@ -149,7 +156,14 @@ body {
 
 @media (max-width: 800px) {
   body {
-    background-size: cover;
+    background: url('../img/Electrica/ele15.jpg') no-repeat center center fixed;
+  background-size: 100vw auto;
+  background-position: center top;
+  position: relative;
+  width: 100vw;
+  min-height: 100vh;
+  overflow-x: hidden;
+
   }
 
   .logo {
