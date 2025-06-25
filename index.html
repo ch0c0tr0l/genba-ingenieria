@@ -12,6 +12,8 @@
   <!-- Estilos personalizados -->
   <link rel="stylesheet" href="css/400px.css">
   <link rel="stylesheet" href="css/800px.css">
+  <link rel="stylesheet" href="css/1200px.css">
+  <link rel="stylesheet" href="css/1201px.css">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Anta&family=Bebas+Neue&display=swap" rel="stylesheet">
@@ -26,7 +28,6 @@
   </div>
 </div>
 
-<<<<<<< HEAD
 <script>
   window.addEventListener('load', function() {
     const loadingScreen = document.getElementById('loading-screen');
@@ -34,9 +35,6 @@
   });
 </script>
 <nav class="navbar navbar-expand-lg tam-menu" id="main-navbar" style="background-color: transparent; width: 100%;">
-=======
-<nav class="navbar navbar-expand-lg tam-menu" id="main-navbar" style="background-color: transparent;">
->>>>>>> 872a26bacc18175a1f5bae0db3f8e0b8f2ab0868
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
       <img src="img/Genba_Blanco.png" alt="Genba Logo" style="max-height: 90px; ">
@@ -65,7 +63,6 @@
     </div>
   </div>
 </nav>
-<<<<<<< HEAD
 <script>
   document.addEventListener('scroll', function () {
     const sections = document.querySelectorAll('section');
@@ -104,8 +101,6 @@
   });
 </script>
 
-=======
->>>>>>> 872a26bacc18175a1f5bae0db3f8e0b8f2ab0868
 
 
 <!-- Jumbotron -->
@@ -175,12 +170,12 @@
         <h1 class="wordart-text text-center" style="padding-top: 40px;">SOLUCIONES EN AUTOMATIZACIÓN</h1>
         <br><br>
         <div class="d-flex justify-content-center"> 
-          <div id="boton" onclick="divLogin(true)" style="color: #000;">Ver mas</div>
+          <div id="boton" onclick="toggleSoluciones()" style="color: #000;">Ver mas</div>
         </div>
         <br><br>        
         <div id="soluciones-extra" style="display: none; margin-top: 20px; opacity: 0; transition: opacity 0.7s;">
           <div class="row justify-content-center">
-            <div id="caja">
+           
 <p class="wordart-text-P">Nos especializamos en ofrecer soluciones integrales en automatización industrial. Nuestro compromiso es proporcionar equipos de vanguardia, así como servicios de capacitación, mantenimiento y programación que garanticen la continuidad y eficiencia de sus operaciones.</p>
 <div class="row">
               <div class="col-md-4 mb-4 d-flex">
@@ -224,11 +219,53 @@
                 </div>
               </div>
             </div>
-</div>
+            <section class="section">
+  <div class="card blue">
+    <div class="card-header" style="color :white;">
+      <P class="wordart-text-P">Neumatica</P>
+    </div>
+    <div class="card-body">
+      <img src="img/PRODUCTOS/AZAZAAZ.png" alt="Neumática" style="width:100%; border-radius:8px; margin-bottom:10px;">
+    </div>
+    <div class="card-footer">
+    </div>
+  </div>
+  <div class="card blue">
+    <div class="card-header" style="color :white;">
+      <P class="wordart-text-P">Equipos de control</P>
+    </div>
+    <div class="card-body">
+      <img src="img/PRODUCTOS/Recurso-14.png" alt="Neumática" style="width:100%; border-radius:8px; margin-bottom:10px;">
+    </div>
+    <div class="card-footer">
+    </div>
+  </div>
+  <div class="card blue">
+    <div class="card-header" style="color :white;">
+      <P class="wordart-text-P">Sensores</P>
+    </div>
+    <div class="card-body">
+      <img src="img/PRODUCTOS/Recurso-13.png" alt="Neumática" style="width:100%; border-radius:8px; margin-bottom:10px;">
+    </div>
+    <div class="card-footer">
+    </div>
+  </div>
+  <div class="card blue">
+    <div class="card-header" style="color :white;">
+      <P class="wordart-text-P">Gabinetes y Accesorios</P>
+    </div>
+    <div class="card-body">
+      <img src="img/PRODUCTOS/ZAZA.png" alt="Neumática" style="width:100%; border-radius:8px; margin-bottom:10px;">
+    </div>
+    <div class="card-footer">
+    </div>
+  </div>
+</section>
+
             
             
           </div>
-          <button class="btn btn-secondary mt-3" onclick="closelogin(false)">Ver menos</button>
+          <button class="btn btn-secondary mt-3" onclick="toggleSoluciones(false)">Ver menos</button>
         </div>
         
       </div>
@@ -291,13 +328,13 @@ calidad y precisión.
                     
                   </div>
                 </div>
-                <div class="col-md-6">
+                <div class="col-md-6 d-flex justify-content-center align-items-center" style="min-height: 100%;">
                   <div style="position: relative; width: 80%; margin: 0 auto;">
                     <video id="video1" autoplay muted controls loop style="width: 100%; height: auto; border-radius: 10px;">
-                        <source src="videos/maquinados.MP4" type="video/mp4">
+                      <source src="videos/maquinados.MP4" type="video/mp4">
                       Tu navegador no soporta la reproducción de videos.
                     </video>
-                  </div>                 
+                  </div>
                 </div>
               </div>
             </div>
@@ -463,80 +500,8 @@ calidad y precisión.
 
 
 
-<style>
-  #boton{
-
-	padding: 10px;
-
-	background: white;
-
-	width: 95px;
-
-	cursor: pointer;
-
-	margin-top: 10px;
-
-	margin-bottom: 10px;
-
-	box-shadow: 0px 0px 1px #000;
-
-	display: inline-block;
-
-}
 
 
-
-#boton:hover{
-
-	opacity: .8;
-
-}
-
-#boton:hover + #caja{
-
-	height: 100px;
-
-}
-
-
-#caja{
-
-	width: 100%;
-
-	margin: auto;
-
-	height: 0px;
-
-	background: #000;
-
-	box-shadow: 10px 10px 3px #D8D8D8;
-
-	transition: height .4s;
-
-}
-
-</style>
-<script>
-  var clic = 1;
-
-function divLogin(show){ 
-var extraw = document.getElementById('caja');
-if (show === false || extraw.style.display === 'block') {
-    extraw.style.opacity = 0;
-    setTimeout(function() {
-      extraw.style.display = 'none';
-    }, 700);
-  } else {
-    extraw.style.display = 'block';
-    setTimeout(function() {
-      extraw.style.opacity = 1;
-    }, 10);
-  }
-
-}
-
-
-</script>
 <script>
   document.getElementById('contactForm').addEventListener('submit', function(event) {
     event.preventDefault(); // Prevent default form submission
@@ -571,6 +536,8 @@ if (show === false || extraw.style.display === 'block') {
 <script src="/js/Cargar_images.js"></script>
 <script src="/js/efectos400px.js"></script>
 <script src="/js/efectos800px.js"></script>
+<script src="/js/efectos1200px.js"></script>
+<script src="/js/efectos1201px.js"></script>
 <script src="/js/Funcionalidad.js"></script>
 <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
 
