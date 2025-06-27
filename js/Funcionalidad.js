@@ -34,26 +34,7 @@ window.addEventListener('load', function() {
     }
   });
 
-  function toggleSoluciones(expand = true) {
-            const section = document.getElementById('Robotica');
-            const extraDiv = document.getElementById('soluciones-extra');
-            section.style.transition = 'height 0.7s cubic-bezier(0.4,0,0.2,1)';
-            if (expand) {
-              section.style.height = 'auto';
-              extraDiv.style.display = 'block';
-              setTimeout(() => {
-          extraDiv.style.opacity = '1';
-              }, 10);
-              event.target.style.display = 'none';
-            } else {
-              extraDiv.style.opacity = '0';
-              setTimeout(() => {
-              extraDiv.style.display = 'none';
-              section.style.height = 'auto';
-              section.querySelector('button.btn-light').style.display = 'inline-block';
-              }, 700); // Espera a que termine la transición de opacidad (0.7s)
-            }
-          }
+
 function openImage(element) {
     const modal = document.getElementById('image-modal');
     const modalImage = document.getElementById('modal-image');

@@ -12,15 +12,21 @@ if (window.matchMedia("(max-width: 400px)").matches) {
     }
 function toggleSoluciones(show) {
   var extra = document.getElementById('soluciones-extra');
+  var verMasBtn = document.getElementById('vermas-btn');
+  var verMenosBtn = document.getElementById('vermenos-btn');
   if (show === false || extra.style.display === 'block') {
     extra.style.opacity = 0;
     setTimeout(function() {
       extra.style.display = 'none';
+      verMasBtn.style.display = 'none';
+       verMenosBtn.style.display = 'none';
     }, 700);
   } else {
     extra.style.display = 'block';
     setTimeout(function() {
       extra.style.opacity = 1;
+      verMasBtn.style.display = 'none';
+       verMenosBtn.style.display = 'none';
     }, 10);
   }
 }
