@@ -1,0 +1,530 @@
+@media (min-width:801px) and (max-width: 1200px)  {
+  @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600&display=swap");
+
+
+  #loading-screen{
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 1200px; 
+    height: 100%; 
+    background-color: white; 
+    z-index: 9999; 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+  }
+  
+    body {
+    background: url('../img/Electrica/ele15.jpg') no-repeat center top fixed;
+    background-size: cover;
+    background-size: 1200px 830px;
+    background-position: left top;
+    width: 1200px;
+    height: 100%;
+    overflow-x: hidden;
+    padding-top: 80px;
+  }
+  .img_cargando {
+    width: 100px;
+    height: 100px;
+    position: top;
+  }
+.navbar-nav {
+      flex-direction:column-reverse;
+      align-items: left;
+    }
+  .logo {
+    width: 40px;
+    height: 40px;
+  }
+  #main-navbar {
+    background-color: white;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+    z-index: 1050;
+    transition: background-color 0.3s;
+    width: 100%;
+  }
+
+  .navbar-nav .nav-link {
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s;
+  }
+
+  .navbar-nav .nav-link:hover {
+    color: #0833a2;
+  }
+
+  #home{
+    height: 20vh;
+  }
+  #nosotros {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.4,0,0.2,1);
+      }
+      #nosotros.visible {
+        opacity: 1;
+        transform: translateY(0);
+      }
+ 
+  .wordart-text {
+    font-size: 30px;
+    font-family: "Bebas Neue", sans-serif;
+  }
+
+  .wordart-text-small {
+    font-size: 20px;
+    font-family: "Bebas Neue", sans-serif;
+    font-weight: bold;
+  }
+.wordart-text-P {
+    font-family: "bebas neue", sans-serif;
+    font-size: 15px;   
+  }
+.whatsapp-float {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 999;
+  }
+  .whatsapp-float img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .nav-link::after {
+    height: 4px;
+  }
+  .imagen_torno{
+    width: 180px;
+    height: 100px;
+  }
+
+  .paralelo{
+    width: 80px;
+    height: auto; 
+    background-color: #0833a2; 
+    transform: skewX(-10deg);
+  }
+  .nosotros-container {
+    width: 200px;
+    height: 300px;
+    background-color: #0833a2;
+    transform: skewX(-10deg);
+    position: relative;
+    overflow: visible;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #robotica {
+    background: linear-gradient(135deg, #0833a2 0%, black 100%);
+  }
+  .efecto-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.7s, transform 0.7s;
+}
+.efecto-scroll.efecto-scroll-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.cards_soluciones {
+  background: rgba(255,255,255,0.1); 
+  border: 1px solid #fff; 
+  box-shadow: 0 2px 8px rgba(8,51,162,0.1); 
+  display: flex; 
+  flex-direction: column;
+  height: auto;
+}
+.card-img-top {
+  width: 200px;
+  height: 200px; 
+  object-fit: cover; 
+  border-radius: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+  .leer-mas {
+        display: block;
+        opacity: 0;
+        max-height: 0;
+        transition: all 0.5s;
+    }
+
+    .leer-mas_open {
+        display: block;
+        opacity: 1;
+        max-height: 500px;
+    }
+
+    .wrapper {
+        width: 40rem; /*PUEDES CAMBIAR PARA MODIFICAR EL ANCHO DEL DIV PADRE*/
+        color: #000;
+        margin: auto;
+    }
+
+    .contenedor {
+        padding: 0.25rem;
+    }
+
+    p {
+        font-size: 0.8rem;
+    }
+
+    .boton {
+        display: inline-block;
+        color: white;
+        background-color: grey;
+        padding: 0.6rem 1.5rem;
+        font-size: 1em;
+        position: relative;
+        z-index: 1;
+        transition: all 0.5s;
+        cursor: pointer;
+    }
+
+    .boton:hover {
+        background-color: #fff;
+        color: grey;
+        box-shadow: 0 0 2 rem rgba(0, 0, 0, 0.1);
+        transform: translateY(-3px);
+    }
+
+ * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  max-width: 50em;
+  margin-inline: auto;
+  gap: 3.25rem;
+  position: relative;
+  z-index: 10;
+  align-items: center;
+  padding: 5em 0;
+
+  .card {
+    position: relative;
+    z-index: 555;
+    max-width: 20rem;
+    min-height: 20rem;
+    width: 90%;
+    display: grid;
+    place-content: center;
+    place-items: center;
+    text-align: center;
+    position: relative;
+    box-shadow: 0.063em 0.75em 1.563em rgb(0 0 0 / 78%);
+    border-radius: 2.25rem;
+
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 2.25rem;
+      z-index: -1;
+      border: 0.155rem solid transparent;
+
+      -webkit-mask: linear-gradient(#fff 0 0) padding-box,
+        linear-gradient(#fff 0 0);
+      -webkit-mask-composite: destination-out;
+      mask-composite: exclude;
+    }
+
+    &-header {
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.8em 0.5em 0em 1.5em;
+
+      .date {
+        color: #ddd;
+      }
+
+      svg {
+        color: #fff;
+        width: 2.5rem;
+        cursor: pointer;
+      }
+    }
+
+    &-body {
+      position: absolute;
+      width: 100%;
+      display: block;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      padding: 0.7em 1.25em 0.5em 1.5em;
+
+      h3 {
+        color: #fff;
+        font-size: 1.375rem;
+        margin-top: 0.625em;
+        margin-bottom: 0.188em;
+        text-transform: capitalize;
+        font-weight: 600;
+      }
+
+      p {
+        color: #ddd;
+        font-size: 1rem;
+        letter-spacing: 0.031rem;
+      }
+      .progress {
+        margin-top: 0.938rem;
+
+        .progress-bar {
+          position: relative;
+          width: 100%;
+          background: #363636;
+          height: 0.313rem;
+          display: block;
+          border-radius: 3.125rem;
+
+          &:after {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            height: 100%;
+            display: block;
+            border-radius: 3.125rem;
+          }
+        }
+        span:first-of-type {
+          color: #fff;
+          text-align: left;
+          font-weight: 600;
+          width: 100%;
+          display: block;
+          margin-bottom: 0.313rem;
+        }
+
+        span {
+          margin-top: 0.313rem;
+          text-align: right;
+          display: block;
+          color: #fff;
+        }
+      }
+    }
+    &-footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      border-top: 0.063rem solid #292929;
+      display: flex;
+      justify-content: space-between;
+      padding: 0.7em 1.25em 0.5em 1.5em;
+      background: #151419;
+      border-bottom-left-radius: 2.25rem;
+      border-bottom-right-radius: 2.25rem;
+
+      ul {
+        display: flex;
+        align-items: center;
+
+        li {
+          list-style-type: none;
+          display: flex;
+          margin-right: -0.625rem;
+
+          img {
+            border-radius: 50%;
+            width: 1.875rem;
+            height: 1.875rem;
+            object-fit: cover;
+          }
+        }
+      }
+
+      .btn-add {
+        width: 1.375rem;
+        height: 1.375rem;
+        border-radius: 50%;
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        svg {
+          width: 1rem;
+        }
+      }
+
+      .btn-countdown {
+        background: #222127;
+        color: #fff;
+        border-radius: 2em;
+        padding: 0.625rem 1.5rem;
+      }
+    }
+  }
+
+  .green {
+    background: radial-gradient(
+      ellipse at right top,
+      #107667ed 0%,
+      #151419 47%,
+      #151419 100%
+    );
+
+    &:before {
+      background: linear-gradient(
+          45deg,
+          #232228,
+          #232228,
+          #232228,
+          #232228,
+          #01c3a8
+        )
+        border-box;
+    }
+    .btn-add {
+      background: green;
+    }
+    .progress-bar:after {
+      width: 90%;
+      background: green;
+    }
+
+    .btn-countdown {
+      &:hover {
+        background: green;
+      }
+    }
+  }
+  .blue {
+    background: radial-gradient(
+      ellipse at right top,
+      #00458f8f 0%,
+      #151419 45%,
+      #151419 100%
+    );
+
+    &:before {
+      background: linear-gradient(
+          45deg,
+          #232228,
+          #232228,
+          #232228,
+          #232228,
+          #1890ff
+        )
+        border-box;
+    }
+    .btn-add {
+      background: blue;
+    }
+    .progress-bar:after {
+      width: 20%;
+      background: blue;
+    }
+    .btn-countdown {
+      &:hover {
+        background: blue;
+      }
+    }
+  }
+  .orange {
+    background: radial-gradient(
+      ellipse at right top,
+      #ffb74194 0%,
+      #151419 47%,
+      #151419 100%
+    );
+
+    &:before {
+      background: linear-gradient(
+          45deg,
+          #232228,
+          #232228,
+          #232228,
+          #232228,
+          #ffb741
+        )
+        border-box;
+    }
+    .btn-add {
+      background: orange;
+    }
+    .progress-bar:after {
+      width: 30%;
+      background: orange;
+    }
+
+    .btn-countdown {
+      &:hover {
+        background: orange;
+      }
+    }
+  }
+  .red {
+    background: radial-gradient(
+      ellipse at right top,
+      #a63d2a82 0%,
+      #151419 47%,
+      #151419 100%
+    );
+
+    &:before {
+      background: linear-gradient(
+          45deg,
+          #232228,
+          #232228,
+          #232228,
+          #232228,
+          #a63d2a
+        )
+        border-box;
+    }
+    .btn-add {
+      background: RED;
+    }
+    .progress-bar:after {
+      width: 50%;
+      background: RED;
+    }
+
+    .btn-countdown {
+      &:hover {
+        background: RED;
+      }
+    }
+  }
+}
+
+}

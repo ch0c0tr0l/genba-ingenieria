@@ -1,0 +1,533 @@
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>GENBA</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- AOS CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aosw.css" rel="stylesheet">
+  <link rel="icon" href="img/genba.png" type="image/x-icon">
+  <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+  <!-- Estilos personalizados -->
+  <link rel="stylesheet" href="css/400px.css">
+  <link rel="stylesheet" href="css/800px.css">
+  <link rel="stylesheet" href="css/1200px.css">
+  <link rel="stylesheet" href="css/1201px.css">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anta&family=Bebas+Neue&display=swap" rel="stylesheet">
+</head>
+<body>
+
+<!-- Página de espera -->
+<div id="loading-screen">
+  <div>
+    <img class="img_cargando" src="img/genba.png" alt="Cargando...">
+    <p style="text-align: center; font-size: 18px; margin-top: 10px;">Cargando...</p>
+  </div>
+</div>
+
+<script>
+  window.addEventListener('load', function() {
+    const loadingScreen = document.getElementById('loading-screen');
+    loadingScreen.style.display = 'none';
+  });
+</script>
+<nav class="navbar navbar-expand-lg tam-menu" id="main-navbar" style="background-color: transparent; width: 100%;">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#">
+      <img src="img/Genba_Blanco.png" alt="Genba Logo" style="max-height: 90px; ">
+    </a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" style="background-color:  white;">
+      <span class="navbar-toggler-icon" style="background-color: white;"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ms-auto w-100 justify-content-between">
+        <li class="nav-item">
+          <a class="nav-link" href="#home">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#nosotros">Nosotros</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#galeria">Galería</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#contacto">Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Robotica">Automatización</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<script>
+  document.addEventListener('scroll', function () {
+    const sections = document.querySelectorAll('section');
+    const navbar = document.getElementById('main-navbar');
+    const navLinks = document.querySelectorAll(' .nav-link');
+
+    let currentSection = '';
+
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= window.innerHeight / 2 && rect.bottom >= window.innerHeight / 2) {
+        currentSection = section.id;
+      }
+    });
+
+    navLinks.forEach(link => {
+      if (link.getAttribute('href').substring(1) === currentSection) {
+        link.style.textShadow = '0px 0px 10px white, 0px 0px 20px white, 0px 0px 30px white';
+      } else {
+        link.style.textShadow = 'none';
+      }
+    });
+
+
+  });
+</script>
+
+<script>
+  window.addEventListener('scroll', function () {
+    const navbar = document.getElementById('main-navbar');
+    if (window.scrollY > 50) {
+      navbar.style.backgroundColor = '#0833a280'; // Blue with transparency
+      navbar.style.width = '100%';
+    } else {
+    }
+  });
+</script>
+
+
+
+<!-- Jumbotron -->
+<section id="home">
+  <div class="container-fluid text-center  d-flex justify-content-center align-items-center position-relative" >
+    <div class="row">
+      <div class="col-md-12 col-12 text-white" style="z-index: 2;" data-aos="fade-left" data-aos-duration="1000">
+        <h1 class="wordart-text">GENBA</h1>
+        <p class="wordart-text-P">SOMOS EL MEJOR ALIADO EN TUS PROYECTOS</P>
+      </div>
+  </div>
+</div>
+</section>
+
+
+
+
+
+<!-- nosotros -->
+<section id="nosotros"  data-aos="fade-right" style="background-color: #0834a23f;">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-3 offset-md-3 d-flex flex-column align-items-center order-1 order-md-0">
+        <div class="row">
+            <div class="col-md-2 col-ls-2 d-flex justify-content-start align-items-end d-none d-md-flex">
+            <div style="width:70px; height: 130px; background-color: #0833a2; transform: skewX(-10deg);"></div>
+            </div>
+          <div class="col-md-8 col-ls-2 d-flex justify-content-center align-items-center">
+            <div  class="nosotros-container">
+              <h1 style="color: white; margin-bottom: 20px; position: relative;" class="wordart-text">NOSOTROS</h1>
+            </div>
+           
+          </div>
+            <div class="col-md-2 col-ls-2 d-flex align-items-start d-none d-md-flex">
+            <div style="width: 70px; height: 130px; background-color: #0833a2; transform: skewX(-10deg);"></div>
+            </div>
+        </div>
+      </div>
+      <div class="col-md-5 d-flex flex-column justify-content-center align-items-center order-0 order-md-1" data-aos="fade-left" data-aos-delay="100">
+        <p style="color: white; text-align: left;">Somos una empresa enfocada en la provisión de servicios y productos integrales. Brindamos soluciones a nuestros clientes a través de nuestros servicios de automatización, desarrollo de ingeniería, diseño y maquinados.</p>
+        <p style="color: white; text-align: left;">Nuestro compromiso es entregar productos y servicios con altos estándares de calidad que satisfagan las necesidades de nuestros clientes. Innovamos continuamente nuestros procesos para lograr una mayor calidad en cada uno de ellos y, de esta manera, ofrecer productos de calidad a un precio competitivo y con un tiempo de respuesta oportuno.</p>
+      </div>
+    </div>
+  </div>
+  <style>
+    @media (min-height:401px) and (max-height: 800px) {
+      #nosotros .row {
+        flex-direction: column-reverse;
+      }
+      #nosotros .col-md-3.offset-md-3 {
+        align-items: flex-start;
+      }
+      #nosotros .col-md-3 {
+        align-items: flex-end;
+        text-align: right;
+      }
+    }
+  </style>
+</section>
+<!-- Robotica -->
+<section id="Robotica">
+  <div class="container-fluid d-flex justify-content-center align-items-center position-relative" style="height: auto;">
+    <div class="row">
+      <div class="col-md-12 text-white text-center" style="z-index: 2;" data-aos="fade-left" data-aos-duration="1000">
+        <h1 class="wordart-text text-center" style="padding-top: 40px;">SOLUCIONES EN AUTOMATIZACIÓN</h1>
+        <br><br>
+        <div class="d-flex justify-content-center"> 
+          <div id="vermas-btn" onclick="toggleSoluciones()" style="color: white; cursor:pointer;">Ver mas</div>
+        </div>
+        <br><br>   
+        <div id="soluciones-extra" >
+          <div class="row justify-content-center">
+            <p class="wordart-text-P">Nos especializamos en ofrecer soluciones integrales en automatización industrial. Nuestro compromiso es proporcionar equipos de vanguardia, así como servicios de capacitación, mantenimiento y programación que garanticen la continuidad y eficiencia de sus operaciones.</p>
+            <div class="row">
+                <div class="col-md-4 mb-4 d-flex">
+                  <div class="card w-100 efecto-scroll cards_soluciones">
+                    <img src="img/11.png" class="card-img-top" alt="Programación Bootstrap" style="background: transparent;">
+                    <div class="card-body flex-grow-1 d-flex flex-column">
+                      <h5 class="card-title" style="color: white;">Control</h5>
+                      <ul  style="color: white; padding-left: 1.2em;">
+                        <li>Mantenimiento a equipos de control</li>
+                        <li>Armado de equipos de control</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4 d-flex">
+                  <div class="card h-100 w-100 efecto-scroll cards_soluciones" >
+                    <img src="img/12.png" class="card-img-top" style="background: transparent;">
+                    <div class="card-body flex-grow-1 d-flex flex-column">
+                      <h5 class="card-title" style="color: white;">Programación</h5>
+                      <ul style="color: white; padding-left: 1.2em;">
+                        <li>Delta</li>
+                        <li>Siemens</li>
+                        <li>Power Flex</li>
+                        <li>Y otros.</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-4 mb-4 d-flex">
+                  <div class="card h-100 w-100 efecto-scroll cards_soluciones" >
+                    <img src="img/10.png" class="card-img-top" style="background: transparent;">
+                    <div class="card-body flex-grow-1 d-flex flex-column">
+                      <h5 class="card-title" style="color: white;">Capacitación</h5>
+                      <ul  style="color: white; padding-left: 1.2em;">
+                        <li>Controladores Lógicos Programables (PLC)</li>
+                        <li>Servomotores</li>
+                        <li>Interfaces Hombre-Máquina (HMI)</li>
+                        <li>Variadores de Frecuencia</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <section class="section">
+                <div class="card blue">
+                  <div class="card-header" style="color :white;">
+                    <P class="wordart-text-P">Neumatica</P>
+                  </div>
+                  <div class="card-body">
+                    <img src="img/PRODUCTOS/AZAZAAZ.png" alt="Neumática" style="width:100%; border-radius:8px; margin-bottom:10px;">
+                  </div>
+                  <div class="card-footer">
+                  </div>
+                </div>
+                <div class="card blue">
+                  <div class="card-header" style="color :white;">
+                    <P class="wordart-text-P">Equipos de control</P>
+                  </div>
+                  <div class="card-body">
+                    <img src="img/PRODUCTOS/Recurso-14.png" alt="Neumática" style="width:100%; border-radius:8px; margin-bottom:10px;">
+                  </div>
+                  <div class="card-footer">
+                  </div>
+                </div>
+                <div class="card blue">
+                  <div class="card-header" style="color :white;">
+                    <P class="wordart-text-P">Sensores</P>
+                  </div>
+                  <div class="card-body">
+                    <img src="img/PRODUCTOS/Recurso-13.png" alt="Neumática" style="width:100%; border-radius:8px; margin-bottom:10px;">
+                  </div>
+                  <div class="card-footer">
+                  </div>
+                </div>
+                <div class="card blue">
+                  <div class="card-header" style="color :white;">
+                    <P class="wordart-text-P">Gabinetes y Accesorios</P>
+                  </div>
+                  <div class="card-body">
+                    <img src="img/PRODUCTOS/ZAZA.png" alt="Neumática" style="width:100%; border-radius:8px; margin-bottom:10px;">
+                  </div>
+                  <div class="card-footer">
+                  </div>
+                </div>
+              </section>
+              <button id="vermenos-btn" class="btn btn-secondary mt-3" onclick="toggleSoluciones(false)">Ver menos</button>
+          </div>
+        </div> 
+      </div>
+    </div>
+  </div>
+</section>
+<!-- Galería -->
+<section id="galeria" class="py-5" data-aos="fade-up" style="background-color: #0834a23f;">
+  <div id="jumbotron-container" style="background-color: transparent;">
+    <!-- Jumbotron 1-->
+    <div class="jumbotron-section" id="jumbotron-1"  style="background-color: transparent;" data-aos="fade-right">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-12">
+            <div class="jumbotron text-center py-5" style="background-color: transparent; color: white;">
+              <div class="row">
+                <div class="col-md-6">
+                  <h3 class="display-4 wordart-text">Diseño y Maquinado de Piezas</h3>
+                  <div class="row">
+                    <div class="col-md-11 offset-md-1 d-flex justify-content-center align-items-center">
+                      <p style="color: white; text-align: justify;">
+                        En GENBA, diseñamos y fabricamos Gauges, herramentales y piezas metálicas de alta 
+calidad y precisión.
+                      </p>
+                    </div>
+                    <div class="row mb-3 offset-md-1">
+                      <div class="col-md-4 col-4 d-flex justify-content-between align-items-center">
+                        <div class="image-container" style="width: 200px; height: 100px; background-color: transparent; transform: skewX(-10deg); border: 2px solid white; overflow: hidden;"  onclick="openImage(this)">
+                          
+                          <img src="img/Dis_piezas_metalicas/met5.PNG" alt="Molde 1" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
+                        </div>
+                      </div>
+                      <div class="col-md-4  col-4  d-flex justify-content-between align-items-center">
+                        <div class="image-container" style="width: 200px; height: 100px; background-color: transparent; transform: skewX(-10deg); border: 2px solid white; overflow: hidden;" onclick="openImage(this)">
+                          <img src="img/Dis_piezas_metalicas/met2.PNG" alt="Molde 2" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
+                        </div>
+                      </div>
+                      <div class="col-md-4 col-4  d-flex justify-content-between align-items-center">
+                        <div class="image-container" style="width: 200px; height: 100px; background-color: transparent; transform: skewX(-10deg); border: 2px solid white; overflow: hidden;"  onclick="openImage(this)">
+                          <img src="img/Dis_piezas_metalicas/met3.jpg" alt="Molde 3" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row mb-3 offset-md-1">
+                      <div class="col-md-4 col-4 d-flex justify-content-between align-items-center">
+                        <div class="image-container" style="width: 200px; height: 100px; background-color: transparent; transform: skewX(-10deg); border: 2px solid white; overflow: hidden;"  onclick="openImage(this)">
+               
+                          <img src="img/Dis_piezas_metalicas/met7.PNG" alt="Molde 2" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
+                        </div>
+                      </div>
+                      <div class="col-md-4  col-4  d-flex justify-content-between align-items-center">
+                        <div class="image-container" style="width: 200px; height: 100px; background-color: transparent; transform: skewX(-10deg); border: 2px solid white; overflow: hidden;" onclick="openImage(this)">
+                          <img src="img/Dis_piezas_metalicas/met9.jpeg" alt="Molde 2" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
+                        </div>
+                      </div>
+                    
+                    </div>
+                     
+                    
+                  </div>
+                </div>
+                <div class="col-md-6 d-flex justify-content-center align-items-center" style="min-height: 100%;">
+                  <div style="position: relative; width: 80%; margin: 0 auto;">
+                    <video id="video1" autoplay muted controls loop style="width: 100%; height: auto; border-radius: 10px;">
+                      <source src="videos/maquinados.MP4" type="video/mp4">
+                      Tu navegador no soporta la reproducción de videos.
+                    </video>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Jumbotron 1 -->
+    <div class="jumbotron-section" id="jumbotron-2"style="display: none;">
+      <div class="container-fluid" style="background-color: transparent;">
+        <div class="row" style="background-color: transparent;">
+          <div class="col-12" style="background-color: transparent;">
+            <div class="jumbotron text-center py-5" style="background-color: transparent; color: white;">
+              <div class="col-12">
+                <div class="row" style="background-color: transparent;">
+                  <div class="col-md-6" style="background-color: transparent;">
+                    <h3 class="display-4 wordart-text-small">Automatización e intalaciones</h3>
+                    <div class="row" style="background-color: transparent;">
+                      <div class="col-md-11 offset-md-1 d-flex justify-content-center align-items-center">
+                        <p style="color: white; text-align: justify;">
+                          Contamos con amplia experiencia en programación de HMI, PLC, SERVOS, VARIADORES, así como en instalaciones eléctricas, neumáticas e hidráulicas. Ofrecemos soluciones integrales a sus proyectos, asegurando la eficiencia de cada uno de ellos.
+                        </p>
+                      </div>
+                      <div class="row mb-3 offset-md-1">
+                        <div class="col-md-4 col-4 d-flex justify-content-between align-items-center">
+                          <div class="image-container" style="width: 200px; height: 100px; background-color: transparent; transform: skewX(-10deg); border: 2px solid white; overflow: hidden;" onclick="openImage(this)">
+                            <img src="img/ele8.jpeg" alt="IGAEN Logo" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-4 d-flex justify-content-between align-items-center">
+                          <div class="image-container" style="width: 200px; height: 100px; background-color: transparent; transform: skewX(-10deg); border: 2px solid white; overflow: hidden;"  onclick="openImage(this)">
+                            <img src="img/Electrica/ele14.jpeg" alt="IGAEN Logo" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-4 d-flex justify-content-between align-items-center">
+                          <div class="image-container" style="width: 200px; height: 100px; background-color: transparent; transform: skewX(-10deg); border: 2px solid white; overflow: hidden;"  onclick="openImage(this)">
+                            <img src="img/Electrica/ele16.jpg" alt="IGAEN Logo" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row" style="background-color: transparent;">
+                      <div class="row mb-3 offset-md-1">
+                        <div class="col-md-4 col-4 d-flex justify-content-between align-items-center">
+                          <div class="image-container" style="width: 200px; height: 100px; background-color: transparent; transform: skewX(-10deg); border: 2px solid white; overflow: hidden;"  onclick="openImage(this)">
+                            <img src="img/ele11.jpeg" alt="IGAEN Logo" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-4 d-flex justify-content-between align-items-center">
+                          <div class="image-container" style="width: 200px; height: 100px; background-color: transparent; transform: skewX(-10deg); border: 2px solid white; overflow: hidden;"  onclick="openImage(this)">
+                            <img src="img/Electrica/ele15.jpg" alt="IGAEN Logo" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
+                          </div>
+                        </div>
+                        <div class="col-md-4 col-4 d-flex justify-content-between align-items-center">
+                          <div class="image-container" style="width: 200px; height: 100px; background-color: transparent; transform: skewX(-10deg); border: 2px solid white; overflow: hidden;"  onclick="openImage(this)">
+                            <img src="img/Electrica/ele5.JPG" alt="IGAEN Logo" style="width: 100%; height: 100%; object-fit: cover; transition: transform 0.3s;">
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    <div class="col-md-6 d-flex justify-content-center align-items-center">
+                      <div style="position: relative; width: 80%; margin: 0 auto;">
+                        <video id="video2" autoplay muted controls loop style="width: 100%; height: auto; border-radius: 10px;">
+                          <source src="videos/instalaciones.MP4" type="video/mp4">
+                          Tu navegador no soporta la reproducción de videos.
+                        </video>
+                      </div>
+                      
+                    </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="text-center my-4 offset-md-1">
+      <div class="d-flex justify-content-start align-items-center">
+        <button class="btn btn-primary mx-2 galeria-btn" onclick="showJumbotron('jumbotron-1')" style="border-radius: 20px;">
+          Diseño y Maquinado
+        </button>
+        <button class="btn btn-primary mx-2 galeria-btn" onclick="showJumbotron('jumbotron-2')" style="border-radius: 20px;">
+          Automatización e Instalaciones
+        </button>
+        <style>
+          .galeria-btn {
+            background-color: #0833a2;
+            border: 2px solid white;
+            color: white;
+            transition: background 0.3s, color 0.3s, border 0.3s;
+          }
+          .galeria-btn:hover {
+            background-color: white;
+            color: #0833a2;
+            border: 2px solid #0833a2;
+          }
+        </style>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function showJumbotron(id) {
+      const jumbotrons = document.querySelectorAll('.jumbotron-section');
+      jumbotrons.forEach(jumbotron => {
+        jumbotron.style.display = 'none';
+      });
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+  <style>
+    .image-container img:hover {
+      transform: scale(1.1);
+    }
+  </style>
+</section>
+<!--modal para imagen extendida-->
+<div id="image-modal" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); width: 35%; height: 80%; background-color: rgba(0, 0, 0, 0.8); z-index: 9999; justify-content: center; align-items: center;">
+  <img id="modal-image" src="" alt="Expanded Image" style="max-width: 100%; max-height: 100%; border: 5px solid white; border-radius: 10px;">
+  <span onclick="closeImage()" style="position: absolute; top: 20px; right: 20px; color: white; font-size: 30px; cursor: pointer;">&times;</span>
+</div>
+
+<script>
+  
+</script>
+
+<!-- Contacto -->
+<section id="contacto" class="py-5" data-aos="fade-left" style="background-color: white;">
+  <div class="container rounded" style="background-color: whitesmoke;">
+    <h2 class="text-center mb-5 wordart-text" style="color: black;">Contáctanos</h2>
+    <div class="row">
+      <div class="col-md-6 d-flex flex-column align-items-center" data-aos="fade-left" data-aos-delay="100">
+        <img src="img/clientes.jpg" alt="Imagen de Contacto" class="img-fluid rounded mb-4" style="width: 400px; height:300px;">
+        <p style="color: black; text-align: center;">Si tienes alguna pregunta o necesitas más información,</p>
+        <p> no dudes en ponerte en contacto con nosotros.</p>
+      </div>
+      <div class="col-md-6" data-aos="fade-left" data-aos-delay="200">
+        <form id="contactForm" action="/php/send_email.php" method="POST">
+          <div class="mb-3">
+            <label for="name" class="form-label">Nombre</label>
+            <input type="text" class="form-control" id="name" name="name" required>
+          </div>
+          <div class="mb-3">
+            <label for="email" class="form-label">Correo Electrónico</label>
+            <input type="email" class="form-control" id="email" name="email" required>
+          </div>
+          <div class="mb-3">
+            <label for="subject" class="form-label">Asunto</label>
+            <input type="text" class="form-control" id="subject" name="subject" required>
+          </div>
+          <div class="mb-3">
+            <label for="message" class="form-label">Mensaje</label>
+            <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary" name="to" id="to" value="contacto@genba-ingenieria.com">Enviar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevent default form submission
+
+    // Simulate form submission (e.g., AJAX or server-side handling)
+    alert('Tu mensaje ha sido enviado con éxito');
+
+    // Clear the form fields
+    this.reset();
+  });
+</script>
+
+<!-- Footer -->
+<footer class="bg-dark text-white py-4">
+  <div class="container text-center">
+    <p class="mb-0">&copy; 2025 GENBA. Todos los derechos reservados.</p>
+    <p class="mb-0">Diseñado por DOTZ conectando ideas</p>
+  </div>
+</footer>
+
+<!-- Botón WhatsApp -->
+<a class="whatsapp-float" href="https://wa.me/524772386417" target="_blank" title="Escríbenos por WhatsApp">
+  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp">
+</a>
+
+<!-- Scripts -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+<script>
+  AOS.init();
+</script>
+<script src="/js/Cargar_images.js"></script>
+<script src="/js/Funcionalidad.js"></script>
+<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+
+</body>
+</html>
