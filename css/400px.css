@@ -18,10 +18,8 @@
     body {
     background: url('../img/Electrica/ele15_movi.png') no-repeat center top fixed;
     background-size: cover;
-    background-size: 400px 830px;
+    background-size: 400px 100%;
     background-position: left top;
-    width: 400px;
-    height: 100%;
     overflow-x: hidden;
     padding-top: 80px;
   }
@@ -45,7 +43,7 @@
     left: 0;
     z-index: 1050;
     transition: background-color 0.3s;
-    width: 100%;
+    width: 400px;
   }
 
   .navbar-nav .nav-link {
@@ -59,17 +57,9 @@
   }
 
   #home{
-    height: 20vh;
+    height: 90vh;
   }
-  #nosotros {
-        opacity: 0;
-        transform: translateY(40px);
-        transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.4,0,0.2,1);
-      }
-      #nosotros.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
+
  
   .wordart-text {
     font-size: 30px;
@@ -79,7 +69,7 @@
   .wordart-text-small {
     font-size: 20px;
     font-family: "Bebas Neue", sans-serif;
-    font-weight: bold;
+    
   }
 .wordart-text-P {
     font-family: "bebas neue", sans-serif;

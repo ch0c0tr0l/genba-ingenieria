@@ -59,17 +59,9 @@
   }
 
   #home{
-    height: 20vh;
+    height: 90vh;
   }
-  #nosotros {
-        opacity: 0;
-        transform: translateY(40px);
-        transition: opacity 0.8s ease, transform 0.8s cubic-bezier(0.4,0,0.2,1);
-      }
-      #nosotros.visible {
-        opacity: 1;
-        transform: translateY(0);
-      }
+
  
   .wordart-text {
     font-size: 30px;
@@ -79,7 +71,7 @@
   .wordart-text-small {
     font-size: 20px;
     font-family: "Bebas Neue", sans-serif;
-    font-weight: bold;
+    
   }
 .wordart-text-P {
     font-family: "bebas neue", sans-serif;
