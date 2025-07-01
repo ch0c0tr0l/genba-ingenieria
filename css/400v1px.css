@@ -16,10 +16,9 @@
   }
   
     body {
-    background: url('../img/Electrica/ele15_movi.png') no-repeat center top fixed;
-    background-size: cover;
-    background-size: 400px 100%;
-    background-position: left top;
+    background: 
+    url('../img/Electrica/ele15_movi.png') no-repeat center center fixed,
+    color( red green blue)
     overflow-x: hidden;
     padding-top: 80px;
   }
@@ -57,7 +56,7 @@
   }
 
   #home{
-    height: 90vh;
+    height: 450px;
   }
 
  
