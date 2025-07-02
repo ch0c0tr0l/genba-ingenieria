@@ -12,37 +12,18 @@ if (window.matchMedia("(max-width: 400px)").matches) {
     }
 function toggleSoluciones(show) {
   var extra = document.getElementById('soluciones-extra');
-<<<<<<< HEAD
-=======
-  var verMasBtn = document.getElementById('vermas-btn');
-  var verMenosBtn = document.getElementById('vermenos-btn');
->>>>>>> a961346413c2a24ec2c199d4c22501a4645edad6
   if (show === false || extra.style.display === 'block') {
     extra.style.opacity = 0;
     setTimeout(function() {
       extra.style.display = 'none';
-<<<<<<< HEAD
-=======
-      verMasBtn.style.display = 'none';
-       verMenosBtn.style.display = 'none';
->>>>>>> a961346413c2a24ec2c199d4c22501a4645edad6
     }, 700);
   } else {
     extra.style.display = 'block';
     setTimeout(function() {
       extra.style.opacity = 1;
-<<<<<<< HEAD
     }, 10);
   }
 }
-=======
-      verMasBtn.style.display = 'none';
-       verMenosBtn.style.display = 'none';
-    }, 10);
-  }
-}
-
->>>>>>> a961346413c2a24ec2c199d4c22501a4645edad6
 // Efecto con el scroll
 document.addEventListener("DOMContentLoaded", function() {
   const elements = document.querySelectorAll('.efecto-scroll');

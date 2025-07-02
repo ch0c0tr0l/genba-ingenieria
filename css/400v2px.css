@@ -17,8 +17,8 @@
   
     body {
     background: 
-    url('../img/Electrica/ele15_movi.png') no-repeat center center fixed,
-    color( red green blue)
+    url('../img/Electrica/ele15_movi.png') no-repeat center center fixed;
+    background-size: cover;
     overflow-x: hidden;
     padding-top: 80px;
   }
